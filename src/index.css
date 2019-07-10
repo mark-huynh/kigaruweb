@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lato:Light');
+
+body{
+  background: #FFF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+li{
+  list-style: none;
+}
+.hours{
+  font-family: Lato;
+  font-size: 150%;
+}
+
+.SushiTab{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-family: Lato;
+}
+
+.SushiTab p{
+  font-size: 80%;
+}
+
+.nav{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.nav li {
+  float: left;
 }
