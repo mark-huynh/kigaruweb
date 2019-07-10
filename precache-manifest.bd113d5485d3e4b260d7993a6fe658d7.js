@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc13c47ab9e60100a3a5ad03565de449",
+    "revision": "251f40a43c9fad51fbcf0e982dbd09dc",
     "url": "/kigaruweb/index.html"
   },
   {
-    "revision": "0138d7db321658b58469",
+    "revision": "317cf2da0807e5c8f0e2",
     "url": "/kigaruweb/static/css/main.06862ba8.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kigaruweb/static/js/2.3310f33a.chunk.js"
   },
   {
-    "revision": "0138d7db321658b58469",
-    "url": "/kigaruweb/static/js/main.a6cb7c92.chunk.js"
+    "revision": "317cf2da0807e5c8f0e2",
+    "url": "/kigaruweb/static/js/main.cf5b0171.chunk.js"
   },
   {
     "revision": "ca08303686ec7d9e0b80",
