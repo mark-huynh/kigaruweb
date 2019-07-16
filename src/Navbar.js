@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
 return(
+<div className = "navwrap">
 
 <ul className = "nav">
   <li>
@@ -24,7 +25,9 @@ return(
   <li>
     <Link to = '/contact'>Contact </Link>
   </li>
+
 </ul>
+</div>
 
 );
 }
