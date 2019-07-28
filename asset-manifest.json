@@ -1,15 +1,13 @@
 {
-  "files": {
-    "main.css": "/kigaruweb/static/css/main.6dbc0a2b.chunk.css",
-    "main.js": "/kigaruweb/static/js/main.52738d16.chunk.js",
-    "main.js.map": "/kigaruweb/static/js/main.52738d16.chunk.js.map",
-    "runtime~main.js": "/kigaruweb/static/js/runtime~main.47433b6f.js",
-    "runtime~main.js.map": "/kigaruweb/static/js/runtime~main.47433b6f.js.map",
-    "static/js/2.ed095d71.chunk.js": "/kigaruweb/static/js/2.ed095d71.chunk.js",
-    "static/js/2.ed095d71.chunk.js.map": "/kigaruweb/static/js/2.ed095d71.chunk.js.map",
-    "index.html": "/kigaruweb/index.html",
-    "precache-manifest.05d88bd94f82c69b2b2a33afc29aaa11.js": "/kigaruweb/precache-manifest.05d88bd94f82c69b2b2a33afc29aaa11.js",
-    "service-worker.js": "/kigaruweb/service-worker.js",
-    "static/css/main.6dbc0a2b.chunk.css.map": "/kigaruweb/static/css/main.6dbc0a2b.chunk.css.map"
-  }
+  "main.css": "/kigaruweb/static/css/main.dac2b91f.chunk.css",
+  "main.js": "/kigaruweb/static/js/main.59728ec6.chunk.js",
+  "main.js.map": "/kigaruweb/static/js/main.59728ec6.chunk.js.map",
+  "runtime~main.js": "/kigaruweb/static/js/runtime~main.47433b6f.js",
+  "runtime~main.js.map": "/kigaruweb/static/js/runtime~main.47433b6f.js.map",
+  "static/js/2.fea9da9e.chunk.js": "/kigaruweb/static/js/2.fea9da9e.chunk.js",
+  "static/js/2.fea9da9e.chunk.js.map": "/kigaruweb/static/js/2.fea9da9e.chunk.js.map",
+  "index.html": "/kigaruweb/index.html",
+  "precache-manifest.53aa79c13d8f118912185b986c2e01f6.js": "/kigaruweb/precache-manifest.53aa79c13d8f118912185b986c2e01f6.js",
+  "service-worker.js": "/kigaruweb/service-worker.js",
+  "static/css/main.dac2b91f.chunk.css.map": "/kigaruweb/static/css/main.dac2b91f.chunk.css.map"
 }
