@@ -25,7 +25,7 @@ class Menu extends React.Component{
                 <Grid
                     container
                     direction="row"
-                    justify="center"
+                    justify="space-between"
                     alignItems="center"
                 >
                     {menuBlocks.map(
