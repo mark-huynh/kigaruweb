@@ -8,22 +8,22 @@ return(
 
 <ul className = "nav">
   <li>
-    <Link to = '/kigaruweb'>Home </Link>
+    <Link to = '/'>Home </Link>
   </li>
   <li>
-    <Link to = '/kigaruweb/sushi' onClick={() => window.location.reload()}> Sushi Bar </Link>
+    <Link to = '/sushi' onClick={() => window.location.reload()}> Sushi Bar </Link>
   </li>
   <li>
-    <Link to = '/kigaruweb/appetizers' onClick={() => window.location.reload()}> Appetizers </Link>
+    <Link to = '/appetizers' onClick={() => window.location.reload()}> Appetizers </Link>
   </li>
   <li>
-    <Link to = '/kigaruweb/maindish' onClick={() => window.location.reload()}> Main Dish </Link>
+    <Link to = '/maindish' onClick={() => window.location.reload()}> Main Dish </Link>
   </li>
   <li>
-    <Link to = '/kigaruweb/drinks' onClick={() => window.location.reload()}> Drinks Etc </Link>
+    <Link to = '/drinks' onClick={() => window.location.reload()}> Drinks Etc </Link>
   </li>
   <li>
-    <Link to = '/kigaruweb/contact' onClick={() => window.location.reload()}> Contact </Link>
+    <Link to = '/contact' onClick={() => window.location.reload()}> Contact </Link>
   </li>
 
 </ul>
