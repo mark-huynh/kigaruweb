@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:Light');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body{
   background: #FFF;
@@ -59,3 +60,60 @@ li{
   top: 0;
   /* width: 100vw; */
 }
+
+.menu-back{
+  background: rgba(255, 255, 255, .85);
+  padding: 5%;
+  width: 80vw;
+  border-radius: 20px;
+}
+
+.menu-title{
+  font-family: Open Sans;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.menu{
+  font-family: Open Sans;
+}
+
+.menu ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu p{
+  margin: 0px;
+}
+
+.menu li{
+  padding-top: 10px;
+}
+
+body{  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.menu-background{
+  background-image:url(./pictures/backgrounds/wall2.jpg);
+
+  background-repeat:no-repeat;
+
+  background-size:cover;
+  
+  background-position: center center;
+
+  background-attachment: fixed;
+  background-color: #464646;
+
+  display: flex;
+  padding: 20px;
+  align-content: center;
+  justify-content: center;
+}
+

@@ -20,26 +20,29 @@ class Menu extends React.Component{
 
         return(
 
-            <div>
-                <h1>{this.props.title}</h1>
+            <div className="menu">
+                <h1 className="menu-title">{this.props.title}</h1>
                 <Grid
                     container
                     direction="row"
                     justify="space-between"
                     alignItems="center"
+                    spacing={4}
                 >
                     {menuBlocks.map(
                         menuBlock => (
-                            React.createElement('ul', null,
-                                menuBlock.map(menuItem => (
-                                    <li>
+                            <Grid item>
+                            {React.createElement('ul', null,
+                            menuBlock.map(menuItem => (
+                                <li>
                                         {menuItem.name} {menuItem.price}
                                         <p>
                                             {menuItem.description}
                                         </p>
                                     </li>
                                 ))
-                            )
+                            )}
+                            </Grid>
                         )
                     )}
                 </Grid>
