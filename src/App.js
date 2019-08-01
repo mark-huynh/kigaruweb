@@ -13,9 +13,9 @@ function App() {
 <div>
     <Router>
     <Navbar/>
-      <Route exact path = '/' component = {Home}/>
-      <Route path = '/sushi' component = {Sushi}/>
-      <Route path = '/appetizers' component = {Appetizers}/>
+      <Route exact path = '/kigaruweb' component = {Home}/>
+      <Route path = '/kigaruweb/sushi' component = {Sushi}/>
+      <Route path = '/kigaruweb/appetizers' component = {Appetizers}/>
     </Router>
     <Footer/>
 </div>
