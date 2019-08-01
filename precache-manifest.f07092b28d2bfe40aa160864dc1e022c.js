@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/js/runtime~main.47433b6f.js"
   },
   {
-    "revision": "1b36db7dcb5cbe38ee88",
-    "url": "/kigaruweb/static/js/main.087ab966.chunk.js"
+    "revision": "87937fc2581cf84c7aba",
+    "url": "/kigaruweb/static/js/main.c1687388.chunk.js"
   },
   {
     "revision": "e076b1d13595c11fd865",
     "url": "/kigaruweb/static/js/2.fa05b911.chunk.js"
   },
   {
-    "revision": "1b36db7dcb5cbe38ee88",
+    "revision": "87937fc2581cf84c7aba",
     "url": "/kigaruweb/static/css/main.407d04d7.chunk.css"
   },
   {
-    "revision": "812b937a3d0345d6f7bbaf9dfedee729",
+    "revision": "9265c5becf761e47c2d67c2ca9d6cfb9",
     "url": "/kigaruweb/index.html"
   }
 ];
