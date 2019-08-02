@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -8,22 +8,22 @@ return(
 
 <ul className = "nav">
   <li>
-    <Link to = '/'>Home </Link>
+    <NavLink to = '/'activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} >Home </NavLink>
   </li>
   <li>
-    <Link to = '/sushi' onClick={() => window.location.reload()}> Sushi Bar </Link>
+    <NavLink to = '/sushi' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Sushi Bar </NavLink>
   </li>
   <li>
-    <Link to = '/appetizers' onClick={() => window.location.reload()}> Appetizers </Link>
+    <NavLink to = '/appetizers' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Appetizers </NavLink>
   </li>
   <li>
-    <Link to = '/maindish' onClick={() => window.location.reload()}> Main Dish </Link>
+    <NavLink to = '/maindish' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Main Dish </NavLink>
   </li>
   <li>
-    <Link to = '/drinks' onClick={() => window.location.reload()}> Drinks Etc </Link>
+    <NavLink to = '/drinks' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Drinks Etc </NavLink>
   </li>
   <li>
-    <Link to = '/contact' onClick={() => window.location.reload()}> Contact </Link>
+    <NavLink to = '/contact' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Contact </NavLink>
   </li>
 
 </ul>

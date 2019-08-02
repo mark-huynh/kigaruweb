@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:Light');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body{
   background: #FFF;
@@ -19,27 +20,17 @@ li{
   font-size: 150%;
 }
 
-.SushiTab{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  font-family: Lato;
-}
-
-.SushiTab p{
-  font-size: 80%;
-}
-
 .nav{
-  position: relative;
+  margin: 0;
 }
 
 .nav li {
-    /* float: left; */
     display: inline-block;
     bottom: 0;
     margin-top: 20px;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-family: Montserrat;
 }
 
 .nav li a{
@@ -49,8 +40,14 @@ li{
   text-align: center;
   text-decoration: none;
   font-size: 100%;
-  font-family: Lato;
   background-color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.nav li a:hover{
+  background-color: #464646;
+  color:white;
+  transition-duration: 300ms;
 }
 
 .navwrap{
@@ -96,7 +93,7 @@ li{
 body{  
   margin: 0;
   padding: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .menu-background{
@@ -117,3 +114,19 @@ body{
   justify-content: center;
 }
 
+.footer{
+  background-color: #464646;
+  height: 10vh;
+  color: white;
+  display: table;
+}
+
+.footer p{
+  color: white;
+  text-align: center;
+  /* height: 10vh; */
+  display: table-cell;
+  vertical-align: middle;
+  font-family: Lato;
+  
+}
