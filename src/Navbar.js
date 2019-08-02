@@ -25,6 +25,9 @@ return(
   <li>
     <NavLink to = '/contact' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} onClick={() => window.location.reload()}> Contact </NavLink>
   </li>
+  <li style={{float: "right", color: "white", paddingRight: "20px"}}>
+    KIGARU SUSHI
+  </li>
 
 </ul>
 </div>

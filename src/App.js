@@ -8,20 +8,43 @@ import {HashRouter, BrowserRouter as Router, Route} from 'react-router-dom';
 
 
 
-function App() {
-  return (
-    <HashRouter basename='/'>
-    <div>
-    {/* <Router> */}
-    <Navbar/>
-      <Route exact path = '/' component = {Home}/>
-      <Route path = '/sushi' component = {Sushi}/>
-      <Route path = '/appetizers' component = {Appetizers}/>
-    {/* </Router> */}
-    <Footer/>
-</div>
-    </HashRouter>
-  );
+class App extends React.Component {
+
+  state = {
+    isDesktop: false
+  };
+
+  updatePredicate = this.updatePredicate.bind(this);
+
+  componentDidMount(){
+    this.updatePredicate();
+    window.addEventListener("resize", this.updatePredicate);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener("resize", this.updatePredicate);
+  }
+
+  updatePredicate(){
+    this.setState({isDesktop: window.innerWidth > 890});
+  }
+
+  render(){
+    return (
+      <HashRouter basename='/'>
+      <div>
+      {/* <Router> */}
+      {this.state.isDesktop &&
+      <Navbar/>}
+        <Route exact path = '/' component = {Home}/>
+        <Route path = '/sushi' component = {Sushi}/>
+        <Route path = '/appetizers' component = {Appetizers}/>
+      {/* </Router> */}
+      <Footer/>
+  </div>
+      </HashRouter>
+    );
+  }
 }
 
 export default App;

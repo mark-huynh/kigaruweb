@@ -6,18 +6,19 @@ class Home extends React.Component{
     render() {
         return(
             <div className = "main">
-                Everything looks ugly right now lol, don't worry it will look a lot different and all images are just placeholders for now
               <div className = "imghrs">
-                <img src = "https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2017/05/Izakaya-1-1024x683.jpg"/>
-                <img src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"/>
+                KIGARU SUSHI
+              </div>
+                <img style={{width: "50vw"}} src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"/>
             <ul className = "hours">
               <li>Monday - Saturday: 5PM - 11PM</li>
               <li>Sunday : Closed</li>
             </ul>
             </div>
-            </div>
         );
     }
+
+    //TODO: On window resize when navbar is too big, switch to side panel/drawer nav bar (with the three bars)
 
 }
 

@@ -7,8 +7,20 @@ body{
 }
 
 .imghrs{
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  height: 100vh;
+  width: 100vw; 
+  background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2017/05/Izakaya-1-1024x683.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+
+  font-size: 9vw;
 }
 
 li{
@@ -18,10 +30,14 @@ li{
 .hours{
   font-family: Lato;
   font-size: 150%;
+  display: inline-block;
+  width: 50vw;
+  padding: 0;
 }
 
 .nav{
   margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav li {
@@ -40,6 +56,7 @@ li{
   text-align: center;
   text-decoration: none;
   font-size: 100%;
+  /* font-size: 1vw; */
   background-color: white;
   border-radius: 10px 10px 0px 0px;
 }
@@ -119,6 +136,7 @@ body{
   height: 10vh;
   color: white;
   display: table;
+  width: 100vw;
 }
 
 .footer p{
