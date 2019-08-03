@@ -13,7 +13,7 @@ import sushi from './pictures/sushi.svg';
 
 
 
-class Dev extends React.Component {
+class Mobilenav extends React.Component {
 
     state = {
         open: false
@@ -73,4 +73,4 @@ class Dev extends React.Component {
     }
 }
 
-export default Dev;
+export default Mobilenav;

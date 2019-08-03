@@ -5,13 +5,17 @@ import Appetizers from './Appetizers';
 import Footer from './Footer.js';
 import Navbar from './Navbar.js';
 import {HashRouter, BrowserRouter as Router, Route} from 'react-router-dom';
+import Drawer from '@material-ui/core/Drawer';
+import Mobilenav from './Mobilenav';
+
 
 
 
 class App extends React.Component {
 
   state = {
-    isDesktop: false
+    isDesktop: false,
+    openSide: false
   };
 
   updatePredicate = this.updatePredicate.bind(this);
@@ -31,11 +35,14 @@ class App extends React.Component {
 
   render(){
     return (
-      <HashRouter basename='/'>
+      <HashRouter basename='foo/'>
       <div>
       {/* <Router> */}
-      {this.state.isDesktop &&
-      <Navbar/>}
+      {this.state.isDesktop ?
+      <Navbar/> : <Mobilenav/>}
+      <Drawer anchor='left'
+      variant='temporary'
+      open={this.state.openSide}>asdf</Drawer>
         <Route exact path = '/' component = {Home}/>
         <Route path = '/sushi' component = {Sushi}/>
         <Route path = '/appetizers' component = {Appetizers}/>
