@@ -1,32 +1,40 @@
 import React from 'react';
+import {useState} from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import { ListItem } from '@material-ui/core';
 import { List } from '@material-ui/core';
 import { ListItemIcon } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import Icon from '@material-ui/core/Icon';
 import skewer from './pictures/appetizer.svg';
 import beer from './pictures/beer.svg';
 import home from './pictures/home.svg';
 import noodle from './pictures/noodle.svg';
 import sending from './pictures/sending.svg';
 import sushi from './pictures/sushi.svg';
+import { makeStyles } from '@material-ui/styles';
 
 
 
-
-class Mobilenav extends React.Component {
-
-    state = {
-        open: false
+const useStyles = makeStyles({
+    root: {
+        color: 'white',
+        position: 'fixed',
+        left: 0,
+        top: 0
     }
+});
 
+function Mobilenav(){
 
-    render() {
+    const [shouldOpen, setOpen] = useState(false);
+        const classes = useStyles();
 
         return (
-            <div classname="mobile-menu">
+            <React.Fragment>
                 <Drawer anchor="left"
-                    open={this.state.open}
-                    onClose={() => this.setState({ open: false })}>
+                    open={shouldOpen}
+                    onClose={() => setOpen(false)}>
                     <List>
                         <ListItem button key="Home">
                             <ListItemIcon>
@@ -53,7 +61,7 @@ class Mobilenav extends React.Component {
                             Main Dish
         </ListItem>
                         <ListItem button key="Drinks">
-                        <ListItemIcon>
+                            <ListItemIcon>
                                 <img src={beer} />
                             </ListItemIcon>
                             Drinks
@@ -64,13 +72,13 @@ class Mobilenav extends React.Component {
                             </ListItemIcon>
                             Contact
         </ListItem>
-                    </List>                </Drawer>
-                <button onClick={() => this.setState({ open: true })}>
-                    test
-                </button>
-            </div>
+                    </List>
+                </Drawer>
+                <IconButton className={classes.root}>
+                    <Icon onClick={() => setOpen(true)}>menu</Icon>
+                </IconButton>
+            </React.Fragment>
         );
     }
-}
 
 export default Mobilenav;
