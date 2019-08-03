@@ -16,12 +16,23 @@ import { makeStyles } from '@material-ui/styles';
 
 
 
+
 const useStyles = makeStyles({
     root: {
         color: 'white',
         position: 'fixed',
         left: 0,
         top: 0
+    },
+    top:{
+        backgroundColor: 'rgb(209, 68, 68)',
+        color: 'white'
+    },
+    list:{
+        padding: 0
+    },
+    drawer:{
+        fontFamily: "Montserrat"
     }
 });
 
@@ -32,10 +43,13 @@ function Mobilenav(){
 
         return (
             <React.Fragment>
-                <Drawer anchor="left"
+                <Drawer className={classes.drawer} anchor="left"
                     open={shouldOpen}
                     onClose={() => setOpen(false)}>
-                    <List>
+                    <List className={classes.list}>
+                        <ListItem className={classes.top}>
+                            KIGARU SUSHI
+                        </ListItem>
                         <ListItem button key="Home">
                             <ListItemIcon>
                                 <img src={home} />
@@ -74,8 +88,8 @@ function Mobilenav(){
         </ListItem>
                     </List>
                 </Drawer>
-                <IconButton className={classes.root}>
-                    <Icon onClick={() => setOpen(true)}>menu</Icon>
+                <IconButton onClick={() => setOpen(true)} className={classes.root}>
+                    <Icon >menu</Icon>
                 </IconButton>
             </React.Fragment>
         );
