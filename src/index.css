@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:Light');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 body{
   background: #FFF;
@@ -13,7 +13,7 @@ body{
 
 .imghrs{
   /* display: flex; */
-  font-family: Source Serif Pro;
+  font-family: Merriweather;
   height: 100vh;
   width: 100vw; 
   background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2017/05/Izakaya-1-1024x683.jpg");
@@ -100,23 +100,25 @@ body{
   /* width: 100vw; */
 }
 
+
+
 .menu-back{
   background: rgba(255, 255, 255, .85);
   padding: 5%;
   width: 80vw;
   border-radius: 20px;
+  margin: 30px;
 }
 
 .menu-title{
-  font-family: Open Sans;
+  font-family: Montserrat;
   letter-spacing: 5px;
   text-align: center;
   font-weight: 200;
-  margin-top: 0px;
 }
 
 .menu{
-  font-family: Open Sans;
+  font-family: Montserrat;
 }
 
 .menu ul{
@@ -129,7 +131,9 @@ body{
 }
 
 .menu li{
-  padding-top: 10px;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
 }
 
 body{  
@@ -143,6 +147,8 @@ body{
 
   background-repeat:no-repeat;
 
+ /* width: 100vw; */
+
   background-size:cover;
   
   background-position: center center;
@@ -154,6 +160,7 @@ body{
   padding: 20px;
   align-content: center;
   justify-content: center;
+  /* z-index: -3; */
 }
 
 .footer{
@@ -177,3 +184,19 @@ body{
 .MuiListItemIcon-root img{
   height: 30px;
 }
+
+.MuiGrid-root .MuiGrid-item{
+  margin: auto;
+}
+
+a{
+  color: black;
+}
+
+/* .mobile-menu-back{
+  background-image: url(./pictures/backgrounds/wall2.jpg);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+} */

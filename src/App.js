@@ -35,21 +35,18 @@ class App extends React.Component {
 
   render(){
     return (
-      <HashRouter basename='foo/'>
+      // <HashRouter basename='/'>
       <div>
-      {/* <Router> */}
+      <Router>
       {this.state.isDesktop ?
       <Navbar/> : <Mobilenav/>}
-      <Drawer anchor='left'
-      variant='temporary'
-      open={this.state.openSide}>asdf</Drawer>
         <Route exact path = '/' component = {Home}/>
         <Route path = '/sushi' component = {Sushi}/>
         <Route path = '/appetizers' component = {Appetizers}/>
-      {/* </Router> */}
+      </Router>
       <Footer/>
   </div>
-      </HashRouter>
+      //{/* </HashRouter> */}
     );
   }
 }

@@ -8,7 +8,7 @@ return(
 
 <ul className = "nav">
   <li>
-    <NavLink to = '/'activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} >Home </NavLink>
+    <NavLink exact to = '/'activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} >Home </NavLink>
   </li>
   <li>
     <NavLink to = '/sushi' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Sushi Bar </NavLink>
