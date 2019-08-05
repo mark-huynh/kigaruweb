@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer.js';
 import Navbar from './Navbar.js';
+
 class Home extends React.Component{
 
     render() {

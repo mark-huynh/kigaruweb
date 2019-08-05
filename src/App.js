@@ -5,10 +5,12 @@ import Appetizers from './Appetizers';
 import Footer from './Footer.js';
 import Navbar from './Navbar.js';
 import {HashRouter, BrowserRouter as Router, Route} from 'react-router-dom';
-import Drawer from '@material-ui/core/Drawer';
 import Mobilenav from './Mobilenav';
 import Maindish from './Maindish'
 import Drinks from './Drinks';
+import Fab from '@material-ui/core/Fab';
+import Icon from '@material-ui/core/Icon';
+import Shopping from './Shopping';
 
 
 
@@ -17,10 +19,22 @@ class App extends React.Component {
 
   state = {
     isDesktop: false,
-    openSide: false
+    openSide: false,
+    showDialog: false
   };
 
   updatePredicate = this.updatePredicate.bind(this);
+  handleClickButton = this.handleClickButton.bind(this);
+  handleClose = this.handleClose.bind(this);
+
+
+  handleClickButton(){
+    this.setState({showDialog: true});
+  }
+
+  handleClose(){
+    this.setState({showDialog: false});
+  }
 
   componentDidMount(){
     this.updatePredicate();
@@ -48,6 +62,10 @@ class App extends React.Component {
         <Route path = '/maindish' component = {Maindish}/>
         <Route path = '/drinks' component = {Drinks}/>
       </Router>
+      <Fab onClick={this.handleClickButton} style={{position: "fixed", bottom: '0', right: '0'}}size="small">
+        <Icon color={"error"}>favorite_border</Icon>
+      </Fab>
+      <Shopping open={this.state.showDialog} close={this.handleClose}/>
       <Footer/>
   </div>
       //{/* </HashRouter> */}
