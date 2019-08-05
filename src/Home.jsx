@@ -1,6 +1,19 @@
 import React from 'react';
 import Footer from './Footer.js';
 import Navbar from './Navbar.js';
+import posed from 'react-pose';
+
+const Description = posed.ul({
+  open: {
+    delayChildren: 200,
+    staggerChildren: 300
+  },
+  closed: {delay: 300 }
+});
+
+const DescriptionItem = posed.li({
+  
+});
 
 class Home extends React.Component{
 

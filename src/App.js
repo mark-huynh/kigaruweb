@@ -11,8 +11,16 @@ import Drinks from './Drinks';
 import Fab from '@material-ui/core/Fab';
 import Icon from '@material-ui/core/Icon';
 import Shopping from './Shopping';
+import posed from 'react-pose';
 
 
+const Pop = posed.div({
+  static:{
+  },
+  grow:{
+    // scale: 10
+  }
+})
 
 
 class App extends React.Component {
@@ -62,9 +70,11 @@ class App extends React.Component {
         <Route path = '/maindish' component = {Maindish}/>
         <Route path = '/drinks' component = {Drinks}/>
       </Router>
+      <Pop pose={this.state.showDialog ? 'static' : 'grow'}>
       <Fab onClick={this.handleClickButton} style={{position: "fixed", bottom: '0', right: '0'}}size="small">
         <Icon color={"error"}>favorite_border</Icon>
       </Fab>
+      </Pop>
       <Shopping open={this.state.showDialog} close={this.handleClose}/>
       <Footer/>
   </div>

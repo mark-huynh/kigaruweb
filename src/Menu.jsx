@@ -47,7 +47,9 @@ class Menu extends React.Component{
                             <Grid item>
                             {React.createElement('ul', null,
                             menuBlock.map(menuItem => (
-                                <li onClick={() => {this.handleClick(menuItem)}}>
+                                <li style={{touchAction: 'manipulation'}}onDoubleClick={() => {this.handleClick(menuItem)}}>
+
+                                    {/* DISABLE DOUBLE TAP TO ZOOM ON MOBILE DEVICE. Try moving touchaction to body tag */}
                                         {menuItem.name} {menuItem.price}
                                         <p>
                                             {menuItem.description}

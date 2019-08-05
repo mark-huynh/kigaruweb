@@ -224,3 +224,17 @@ a{
   background-position: center center;
 
 }
+
+.favorite-welcome{
+  color: #535353;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+.favorite-welcome h1{
+  margin: 0;
+}
+
+.favorite-welcome div{
+  padding: 20px;
+}
