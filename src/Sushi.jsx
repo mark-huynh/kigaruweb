@@ -17,8 +17,9 @@ class Sushi extends React.Component {
     render(){
         return (
                 <div style={this.style}className="menu-background">
-                    <div className="mobile-menu-back">
-                    </div>
+                    {!this.props.desktop && <div className="mobile-menu-back">
+                    </div>}
+
                     <MenuContainer>
                         <Menu title="Nigiri & Gunkan (2pc)" items={[
     {

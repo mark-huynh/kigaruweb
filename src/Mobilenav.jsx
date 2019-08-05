@@ -23,7 +23,8 @@ const useStyles = makeStyles({
         color: 'white',
         position: 'fixed',
         left: 0,
-        top: 0
+        top: 0,
+        zIndex: 2
     },
     top:{
         backgroundColor: 'rgb(209, 68, 68)',

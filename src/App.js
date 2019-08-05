@@ -41,7 +41,7 @@ class App extends React.Component {
       {this.state.isDesktop ?
       <Navbar/> : <Mobilenav/>}
         <Route exact path = '/' component = {Home}/>
-        <Route path = '/sushi' component = {Sushi}/>
+        <Route path = '/sushi' component = {() => <Sushi desktop={this.state.isDesktop}/>}/>
         <Route path = '/appetizers' component = {Appetizers}/>
       </Router>
       <Footer/>
