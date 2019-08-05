@@ -1,17 +1,16 @@
+// import {ADD_TO_CART} from './action/cartActions'
+
 const initState = {
-    items: [
-        {test: "Hello"},
-        {test: "Hello"},
-        {test: "Hello"},
-        {test: "Hello"}
-    ],
-    addedItems:[],
-    total: 0
+    items: []
 
 }
 const cartReducer= (state = initState,action)=>{
-    
-    return state;
-
+    if(action.type === 'ADD_TO_CART')
+    {
+          return Object.assign({}, state, {items: state.items.concat(action.payload)});
+    }
+  else{
+      return state
+  }
 }
 export default cartReducer;

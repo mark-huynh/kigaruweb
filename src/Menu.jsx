@@ -1,11 +1,23 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import { connect } from 'react-redux';
+import {addToCart} from './actions/cartActions'
 
+
+const mapDispatchToProps =(dispatch) =>{
+    return{
+        addToCart: (menuItem)=>{dispatch(addToCart(menuItem))}
+    }
+}
 
 class Menu extends React.Component{
 
     constructor(props){
         super(props);
+    }
+
+    handleClick = (name) => {
+        this.props.addToCart(name);
     }
 
     render(){
@@ -35,7 +47,7 @@ class Menu extends React.Component{
                             <Grid item>
                             {React.createElement('ul', null,
                             menuBlock.map(menuItem => (
-                                <li>
+                                <li onClick={() => {this.handleClick(menuItem)}}>
                                         {menuItem.name} {menuItem.price}
                                         <p>
                                             {menuItem.description}
@@ -54,4 +66,5 @@ class Menu extends React.Component{
     }
 }
 
-export default Menu;
+
+export default connect(null, mapDispatchToProps)(Menu);
