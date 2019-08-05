@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/home.133ce3f8.svg"
   },
   {
-    "revision": "1105390a89b58ac0b36e",
-    "url": "/kigaruweb/static/css/main.9178a3ac.chunk.css"
+    "revision": "eb044160ec7430ccd582",
+    "url": "/kigaruweb/static/css/main.836d5db7.chunk.css"
   },
   {
     "revision": "ca08303686ec7d9e0b80",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/beer.216305e9.svg"
   },
   {
-    "revision": "1105390a89b58ac0b36e",
-    "url": "/kigaruweb/static/js/main.8695e5b2.chunk.js"
+    "revision": "eb044160ec7430ccd582",
+    "url": "/kigaruweb/static/js/main.fa0b4aa2.chunk.js"
   },
   {
     "revision": "c005cbdf57454188e4ac4cf6d65a6a09",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/wall2.91e69747.jpg"
   },
   {
-    "revision": "816b655f8e9b7a0a77cbf2d16201480f",
+    "revision": "49eda8a742f63f888bfa4d49e2356f50",
     "url": "/kigaruweb/index.html"
   }
 ];
