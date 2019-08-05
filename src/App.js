@@ -7,6 +7,8 @@ import Navbar from './Navbar.js';
 import {HashRouter, BrowserRouter as Router, Route} from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 import Mobilenav from './Mobilenav';
+import Maindish from './Maindish'
+import Drinks from './Drinks';
 
 
 
@@ -43,6 +45,8 @@ class App extends React.Component {
         <Route exact path = '/' component = {Home}/>
         <Route path = '/sushi' component = {() => <Sushi desktop={this.state.isDesktop}/>}/>
         <Route path = '/appetizers' component = {Appetizers}/>
+        <Route path = '/maindish' component = {Maindish}/>
+        <Route path = '/drinks' component = {Drinks}/>
       </Router>
       <Footer/>
   </div>

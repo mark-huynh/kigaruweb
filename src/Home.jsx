@@ -7,6 +7,10 @@ class Home extends React.Component{
         return(
             <div className = "main">
               <div className = "imghrs">
+              </div>
+              <div className="title-text">
+                <div>
+
                 KIGARU SUSHI
                 <ul>
                   <li>Japanese Cusine</li>
@@ -14,6 +18,7 @@ class Home extends React.Component{
                   <li>Ramen</li>
                   <li>Drinks</li>
                 </ul>
+                </div>
               </div>
                 <img className="kigaru-image" src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"/>
             <ul className = "hours">
