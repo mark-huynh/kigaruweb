@@ -1,37 +1,58 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {addToCart} from './actions/cartActions';
+import {removeFromCart} from './actions/cartActions';
 import Icon from '@material-ui/core/Icon';
 
 const mapDispatchToProps =(dispatch) =>{
     return{
-        addToCart: (menuItem)=>{dispatch(addToCart(menuItem))}
+        addToCart: (menuItem)=>{dispatch(addToCart(menuItem))},
+        removeFromCart: (menuItem)=>{dispatch(removeFromCart(menuItem))}
     }
 }
 
+const mapStateToProps = (state)=>{
+    return{
+        items: state.items
+    }
+}
 
 class MenuItem extends Component {
 
     state={
         showHeart: false,
         activeHeart: false
-    }//MAKE HEART DISSAPEAR AFTER COUPLE SECONDS
-//Dialog box when added
-    handleClick = (name) => {
+    }
+    handleClickAdd = (name) => {
         this.props.addToCart(name);
         this.setState({activeHeart: true})
-        //TODO: check if itemname is inside of the redux store and if it is, make heart filled
+    }
+
+    handleClickRemove = (item) => {
+        this.props.removeFromCart(item);
+        this.setState({activeHeart: false})
     }
 
     handleBoxClick = () => {
         this.setState({showHeart: true});
-    }
+        setTimeout(() => {
+          this.setState({ showHeart: false });
+        }, 2000);
+        }
+
+        componentDidMount = () => {
+            // if(this.props.items.includes(this.props.item) && this.state.activeHeart != true)
+            // {
+            //     this.setState({activeHeart: true});
+            // }
+        } //TODO: refactor? Race conditions here or too many checks?
 
     render() {
+
         return (
           <li onClick={() => this.handleBoxClick()}>
             {this.props.item.name} {this.props.item.price}{" "}
-            {this.state.showHeart && <Icon style={{fontSize: "medium", paddingLeft: '7px'}} color={this.state.activeHeart ? 'error' : 'disabled'}onClick={() => this.handleClick(this.props.item)}>
+            {this.state.showHeart && <Icon style={{fontSize: "medium", paddingLeft: '7px'}} color={this.state.activeHeart ? 'error' : 'disabled'} onClick={this.state.activeHeart ? ()=>this.handleClickRemove(this.props.item): () => this.handleClickAdd(this.props.item)}>
               favorite
             </Icon>}
             <p>{this.props.item.description}</p>
@@ -40,4 +61,4 @@ class MenuItem extends Component {
     }
 }
 
-export default connect (null, mapDispatchToProps)(MenuItem);
+export default connect (mapStateToProps, mapDispatchToProps)(MenuItem);

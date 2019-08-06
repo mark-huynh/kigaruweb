@@ -58,9 +58,9 @@ class App extends React.Component {
 
   render() {
     return (
-      // <HashRouter basename='/'>
+      <HashRouter basename='/'>
       <div>
-        <Router>
+        {/* <Router> */}
           {this.state.isDesktop ? <Navbar /> : <Mobilenav />}
           <Route exact path="/" component={Home} />
           <Route
@@ -70,7 +70,7 @@ class App extends React.Component {
           <Route path="/appetizers" component={Appetizers} />
           <Route path="/maindish" component={Maindish} />
           <Route path="/drinks" component={Drinks} />
-        </Router>
+        {/* </Router> */}
         <Pop pose={this.state.showDialog ? "static" : "grow"}>
           <Fab
             onClick={this.handleClickButton}
@@ -83,7 +83,7 @@ class App extends React.Component {
         <Shopping open={this.state.showDialog} close={this.handleClose} />
         <Footer />
       </div>
-      //{/* </HashRouter> */}
+      </HashRouter>
     );
   }
 }

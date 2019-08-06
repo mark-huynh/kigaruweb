@@ -8,7 +8,8 @@ class Drinks extends React.Component {
     style={
         backgroundImage: `url(${wall})`
     }
-
+ 
+  
     render(){
 
         return (
@@ -19,29 +20,29 @@ class Drinks extends React.Component {
             <MenuContainer>
               <Menu title="Drinks" items={[
                   {
-                    name: "ItemName",
+                    name: "asdf",
                     price: 10.5
                   },
                   {
-                    name: "ItemName",
+                    name: "ItemNagsadfame",
                     price: 10.5,
                     description:
                       "Relatively Long description asdfajsdflkas asdkfl dsjafl dsjlfka sdlfj dfs jalkdfsjdl ak"
                   },
                   {
-                    name: "ItemName",
+                    name: "gfds",
                     price: 10.5,
                     description:
                       "Relatively Long description asdfajsdflkas asdkfl dsjafl dsjlfka sdlfj dfs jalkdfsjdl ak"
                   },
                   {
-                    name: "ItemName",
+                    name: "asdg",
                     price: 10.5,
                     description:
                       "Relatively Long description asdfajsdflkas asdkfl dsjafl dsjlfka sdlfj dfs jalkdfsjdl ak"
                   },
                   {
-                    name: "ItemName",
+                    name: "gg",
                     price: 10.5,
                     description: ""
                   },

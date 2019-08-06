@@ -24,8 +24,11 @@ class Shopping extends React.Component{
 
     render()
     {
-
-      //TODO: do for loop and calculate total price to inject into table
+        // let total = 0;
+        // for(let i = 0; i < this.props.items.length; i++)
+        // {
+        //   total += this.props.items[i].price;
+        // }
 
         return (
           <Dialog
@@ -34,7 +37,8 @@ class Shopping extends React.Component{
             fullWidth
             onClose={this.props.close}
           >
-            {this.props.items.length == 0 ? (
+            {console.log(this.props.items)}
+            {this.props.items.length !== undefined && this.props.items.length == 0 ? (
               <div>
                 <Grid className ="favorite-welcome"
                   container
@@ -59,13 +63,13 @@ class Shopping extends React.Component{
                   {this.props.items.map(item => (
                     <TableRow key={item.name}>
                       <TableCell>{item.name}</TableCell>
-                      <TableCell>{item.price}</TableCell>
+                      <TableCell>${item.price}</TableCell>
                     </TableRow>
                   ))}
                   <TableRow>
                     <TableCell align="right">Total</TableCell>
                     <TableCell>
-                      {}
+                      {/* ${total} */}
                     </TableCell>
                   </TableRow>
                 </TableBody>
