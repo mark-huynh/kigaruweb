@@ -18,47 +18,57 @@ const mapStateToProps = (state)=>{
 }
 
 class MenuItem extends Component {
+  state = {
+    showHeart: false,
+    activeHeart: false
+  };
+  handleClickAdd = name => {
+    this.props.addToCart(name);
+    this.setState({ activeHeart: true });
+  };
 
-    state={
-        showHeart: false,
-        activeHeart: false
+  handleClickRemove = item => {
+    this.props.removeFromCart(item);
+    this.setState({ activeHeart: false });
+  };
+
+  handleBoxClick = () => {
+    this.setState({ showHeart: true });
+    setTimeout(() => {
+      this.setState({ showHeart: false });
+    }, 2000);
+  };
+
+  componentDidMount = () => {
+    if (
+      this.props.items.some(e => e.name === this.props.item.name) &&
+      this.state.activeHeart !== true
+    ) {
+      this.setState({ activeHeart: true });
     }
-    handleClickAdd = (name) => {
-        this.props.addToCart(name);
-        this.setState({activeHeart: true})
-    }
+  }; //TODO: refactor? Race conditions here or too many checks?
 
-    handleClickRemove = (item) => {
-        this.props.removeFromCart(item);
-        this.setState({activeHeart: false})
-    }
-
-    handleBoxClick = () => {
-        this.setState({showHeart: true});
-        setTimeout(() => {
-          this.setState({ showHeart: false });
-        }, 2000);
-        }
-
-        componentDidMount = () => {
-             if(this.props.items.some(e => e.name === this.props.item.name) && this.state.activeHeart != true)
-            {
-                this.setState({activeHeart: true});
+  render() {
+    return (
+      <li onClick={() => this.handleBoxClick()}>
+        {this.props.item.name} {this.props.item.price}{" "}
+        {this.state.showHeart && (
+          <Icon
+            style={{ fontSize: "medium", paddingLeft: "7px" }}
+            color={this.state.activeHeart ? "error" : "disabled"}
+            onClick={
+              this.state.activeHeart
+                ? () => this.handleClickRemove(this.props.item)
+                : () => this.handleClickAdd(this.props.item)
             }
-        } //TODO: refactor? Race conditions here or too many checks?
-
-    render() {
-
-        return (
-          <li onClick={() => this.handleBoxClick()}>
-            {this.props.item.name} {this.props.item.price}{" "}
-            {this.state.showHeart && <Icon style={{fontSize: "medium", paddingLeft: '7px'}} color={this.state.activeHeart ? 'error' : 'disabled'} onClick={this.state.activeHeart ? ()=>this.handleClickRemove(this.props.item): () => this.handleClickAdd(this.props.item)}>
-              favorite
-            </Icon>}
-            <p>{this.props.item.description}</p>
-          </li>
-        );
-    }
+          >
+            favorite
+          </Icon>
+        )}
+        <p>{this.props.item.description}</p>
+      </li>
+    );
+  }
 }
 
 export default connect (mapStateToProps, mapDispatchToProps)(MenuItem);

@@ -2,7 +2,7 @@ class StateLoader {
 
     loadState() {
         try {
-            let serializedState = localStorage.getItem("http://contoso.com:state");
+            let serializedState = localStorage.getItem("itemState");
 
             if (serializedState === null) {
                 return this.initializeState();
@@ -18,7 +18,7 @@ class StateLoader {
     saveState(state) {
         try {
             let serializedState = JSON.stringify(state);
-            localStorage.setItem("http://contoso.com:state", serializedState);
+            localStorage.setItem("itemState", serializedState);
 
         }
         catch (err) {

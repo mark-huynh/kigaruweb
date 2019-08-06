@@ -10,9 +10,7 @@ const cartReducer= (state = initState,action)=>{
     }
     else if(action.type ==='REMOVE_FROM_CART')
     {
-        console.log(state.items);
-        console.log(state.items.filter(item => item.name != action.payload.name));
-        return Object.assign({},{items: state.items.filter(item => item.name != action.payload.name)});
+        return Object.assign({},{items: state.items.filter(item => item.name !== action.payload.name)});
     }
   else{
       return state

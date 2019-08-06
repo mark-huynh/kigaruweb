@@ -1,6 +1,4 @@
-import React from 'react';
-import Footer from './Footer.js';
-import Navbar from './Navbar.js';
+import React from "react";
 import posed from 'react-pose';
 
 const Description = posed.ul({
@@ -46,8 +44,10 @@ class Home extends React.Component {
         <div className="imghrs" />
         <div className="title-text">
           <div>
-            <FadeIn pose={this.state.isOpen ? 'open' : 'closed'}>KIGARU SUSHI</FadeIn>
-            <Description pose={this.state.isOpen ? 'open' : 'closed'}>
+            <FadeIn pose={this.state.isOpen ? "open" : "closed"}>
+              KIGARU SUSHI
+            </FadeIn>
+            <Description pose={this.state.isOpen ? "open" : "closed"}>
               <DescriptionItem>Japanese Cusine</DescriptionItem>
               <DescriptionItem>Sushi</DescriptionItem>
               <DescriptionItem>Ramen</DescriptionItem>
