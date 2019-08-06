@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
+import {removeFromCart} from './actions/cartActions';
 import Popover from '@material-ui/core/Popover';
 //TODO: popover of description for each item on table?
 
@@ -18,17 +19,25 @@ const mapStateToProps = (state)=>{
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return{
+      removeFromCart: (menuItem)=>{dispatch(removeFromCart(menuItem))}
+    }
+}
+
 class Shopping extends React.Component{
 
-
+  handleDelete = (item) => {
+    this.props.removeFromCart(item);
+  }
 
     render()
     {
-        // let total = 0;
-        // for(let i = 0; i < this.props.items.length; i++)
-        // {
-        //   total += this.props.items[i].price;
-        // }
+        let total = 0;
+        for(let i = 0; i < this.props.items.length; i++)
+        {
+          total += this.props.items[i].price;
+        }
 
         return (
           <Dialog
@@ -56,20 +65,23 @@ class Shopping extends React.Component{
             ) : (
               <Table>
                 <TableHead>
+                  <TableCell></TableCell>
                   <TableCell>Item</TableCell>
                   <TableCell>Price</TableCell>
                 </TableHead>
                 <TableBody>
                   {this.props.items.map(item => (
                     <TableRow key={item.name}>
+                      <TableCell><Icon onClick={() => this.handleDelete(item)}>delete_outline</Icon></TableCell>
                       <TableCell>{item.name}</TableCell>
                       <TableCell>${item.price}</TableCell>
                     </TableRow>
                   ))}
                   <TableRow>
+                    <TableCell></TableCell>
                     <TableCell align="right">Total</TableCell>
                     <TableCell>
-                      {/* ${total} */}
+                      ${total}
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -80,4 +92,4 @@ class Shopping extends React.Component{
     }
 }
 
-export default connect(mapStateToProps)(Shopping);
+export default connect(mapStateToProps, mapDispatchToProps)(Shopping);

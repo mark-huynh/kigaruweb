@@ -41,10 +41,10 @@ class MenuItem extends Component {
         }
 
         componentDidMount = () => {
-            // if(this.props.items.includes(this.props.item) && this.state.activeHeart != true)
-            // {
-            //     this.setState({activeHeart: true});
-            // }
+             if(this.props.items.some(e => e.name === this.props.item.name) && this.state.activeHeart != true)
+            {
+                this.setState({activeHeart: true});
+            }
         } //TODO: refactor? Race conditions here or too many checks?
 
     render() {
