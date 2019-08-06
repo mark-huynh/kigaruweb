@@ -19,8 +19,8 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   animation-name: blurring;
-  animation-duration: 1s;
-  animation-delay: 2s;
+  animation-duration: .5s;
+  animation-delay: .5s;
   animation-fill-mode: forwards;
 }
 
@@ -237,4 +237,12 @@ a{
 
 .favorite-welcome div{
   padding: 20px;
+}
+
+/* .menu-back{
+  touch-action: manipulation;
+} */
+
+*{
+  touch-action: none;
 }

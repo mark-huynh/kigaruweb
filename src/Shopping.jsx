@@ -41,8 +41,8 @@ class Shopping extends React.Component{
                 >
                   <Grid item><Icon color='error'>favorite</Icon></Grid>
                   <Grid item><h1>Favorites</h1></Grid>
-                  <Grid item>Welcome to your favorites! As you browse our website you can add any items that catch your eye to this list so 
-                  there's no need to jump back and forth while deciding what you like! This will make it easy when you come visit Kigaru! </Grid>
+                  <Grid item>Welcome to your favorites! As you browse our website you can add any items that interest you so 
+                  there's no need to jump back and forth while browsing or ordering! Thanks for visiting our website! </Grid>
                   <Grid item>Double click/tap any item on any of the menus to add it to your favorites! </Grid>
                 </Grid>
               </div>

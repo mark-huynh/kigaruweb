@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
 import {addToCart} from './actions/cartActions'
+import Snackbar from '@material-ui/core/Snackbar';
 
 
 const mapDispatchToProps =(dispatch) =>{
@@ -12,13 +13,19 @@ const mapDispatchToProps =(dispatch) =>{
 
 class Menu extends React.Component{
 
+    state={
+        openSnack: false
+    }
+
     constructor(props){
         super(props);
     }
 
     handleClick = (name) => {
         this.props.addToCart(name);
+        // this.setState({openSnack: true});
     }
+
 
     render(){
 
@@ -47,7 +54,7 @@ class Menu extends React.Component{
                             <Grid item>
                             {React.createElement('ul', null,
                             menuBlock.map(menuItem => (
-                                <li style={{touchAction: 'manipulation'}}onDoubleClick={() => {this.handleClick(menuItem)}}>
+                                <li style={{touchAction: 'manipulation'}} onDoubleClick={() => {this.handleClick(menuItem)}}>
 
                                     {/* DISABLE DOUBLE TAP TO ZOOM ON MOBILE DEVICE. Try moving touchaction to body tag */}
                                         {menuItem.name} {menuItem.price}
@@ -61,6 +68,17 @@ class Menu extends React.Component{
                         )
                     )}
                 </Grid>
+                {/* <Snackbar
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                    }}
+                open={this.state.openSnack}
+                onClose={() => this.setState({openSnack: false})}
+                message={<span>Hi</span>}
+                autoHideDuration={2000}
+>
+                </Snackbar> */}
             </div>
 
             

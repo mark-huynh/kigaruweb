@@ -24,7 +24,6 @@ const Pop = posed.div({
 
 
 class App extends React.Component {
-
   state = {
     isDesktop: false,
     openSide: false,
@@ -36,48 +35,54 @@ class App extends React.Component {
   handleClose = this.handleClose.bind(this);
 
 
-  handleClickButton(){
-    this.setState({showDialog: true});
+  handleClickButton() {
+    this.setState({ showDialog: true });
   }
 
-  handleClose(){
-    this.setState({showDialog: false});
+  handleClose() {
+    this.setState({ showDialog: false });
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.updatePredicate();
     window.addEventListener("resize", this.updatePredicate);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener("resize", this.updatePredicate);
   }
 
-  updatePredicate(){
-    this.setState({isDesktop: window.innerWidth > 890});
+  updatePredicate() {
+    this.setState({ isDesktop: window.innerWidth > 890 });
   }
 
-  render(){
+  render() {
     return (
       // <HashRouter basename='/'>
       <div>
-      <Router>
-      {this.state.isDesktop ?
-      <Navbar/> : <Mobilenav/>}
-        <Route exact path = '/' component = {Home}/>
-        <Route path = '/sushi' component = {() => <Sushi desktop={this.state.isDesktop}/>}/>
-        <Route path = '/appetizers' component = {Appetizers}/>
-        <Route path = '/maindish' component = {Maindish}/>
-        <Route path = '/drinks' component = {Drinks}/>
-      </Router>
-      <Pop pose={this.state.showDialog ? 'static' : 'grow'}>
-      <Fab onClick={this.handleClickButton} style={{position: "fixed", bottom: '0', right: '0'}}size="small">
-        <Icon color={"error"}>favorite_border</Icon>
-      </Fab>
-      </Pop>
-      <Shopping open={this.state.showDialog} close={this.handleClose}/>
-      <Footer/>
-  </div>
+        <Router>
+          {this.state.isDesktop ? <Navbar /> : <Mobilenav />}
+          <Route exact path="/" component={Home} />
+          <Route
+            path="/sushi"
+            component={() => <Sushi desktop={this.state.isDesktop} />}
+          />
+          <Route path="/appetizers" component={Appetizers} />
+          <Route path="/maindish" component={Maindish} />
+          <Route path="/drinks" component={Drinks} />
+        </Router>
+        <Pop pose={this.state.showDialog ? "static" : "grow"}>
+          <Fab
+            onClick={this.handleClickButton}
+            style={{ position: "fixed", bottom: "0", right: "0" }}
+            size="small"
+          >
+            <Icon color={"error"}>favorite_border</Icon>
+          </Fab>
+        </Pop>
+        <Shopping open={this.state.showDialog} close={this.handleClose} />
+        <Footer />
+      </div>
       //{/* </HashRouter> */}
     );
   }
