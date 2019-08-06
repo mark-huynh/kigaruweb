@@ -74,7 +74,7 @@ class App extends React.Component {
         <Pop pose={this.state.showDialog ? "static" : "grow"}>
           <Fab
             onClick={this.handleClickButton}
-            style={{ position: "fixed", bottom: "0", right: "0" }}
+            style={{ position: "fixed", bottom: "0", right: "0", zIndex: 2, marginRight: "5px", marginBottom: "5px" }}
             size="small"
           >
             <Icon color={"error"}>favorite_border</Icon>

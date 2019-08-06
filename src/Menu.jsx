@@ -3,6 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
 import {addToCart} from './actions/cartActions'
 import Snackbar from '@material-ui/core/Snackbar';
+import Icon from '@material-ui/core/Icon';
+import MenuItem from './MenuItem';
+
 
 
 const mapDispatchToProps =(dispatch) =>{
@@ -54,14 +57,15 @@ class Menu extends React.Component{
                             <Grid item>
                             {React.createElement('ul', null,
                             menuBlock.map(menuItem => (
-                                <li style={{touchAction: 'manipulation'}} onDoubleClick={() => {this.handleClick(menuItem)}}>
+                                // <li style={{touchAction: 'manipulation'}} onDoubleClick={() => {this.handleClick(menuItem)}}>
 
-                                    {/* DISABLE DOUBLE TAP TO ZOOM ON MOBILE DEVICE. Try moving touchaction to body tag */}
-                                        {menuItem.name} {menuItem.price}
-                                        <p>
-                                            {menuItem.description}
-                                        </p>
-                                    </li>
+                                //     {/* DISABLE DOUBLE TAP TO ZOOM ON MOBILE DEVICE. Try moving touchaction to body tag */}
+                                //         {menuItem.name} {menuItem.price} <Icon style={{fontSize: 'medium', paddingLeft: '5px'}}>favorite_border</Icon>
+                                //         <p>
+                                //             {menuItem.description}
+                                //         </p>
+                                //     </li>
+                                <MenuItem item={menuItem}/>
                                 ))
                             )}
                             </Grid>

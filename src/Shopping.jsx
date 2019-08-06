@@ -24,6 +24,9 @@ class Shopping extends React.Component{
 
     render()
     {
+
+      //TODO: do for loop and calculate total price to inject into table
+
         return (
           <Dialog
             open={this.props.open}
@@ -43,7 +46,7 @@ class Shopping extends React.Component{
                   <Grid item><h1>Favorites</h1></Grid>
                   <Grid item>Welcome to your favorites! As you browse our website you can add any items that interest you so 
                   there's no need to jump back and forth while browsing or ordering! Thanks for visiting our website! </Grid>
-                  <Grid item>Double click/tap any item on any of the menus to add it to your favorites! </Grid>
+                  <Grid item>Tap/click on any items from the menus to reveal an optional heart to add them here!</Grid>
                 </Grid>
               </div>
             ) : (
@@ -62,9 +65,7 @@ class Shopping extends React.Component{
                   <TableRow>
                     <TableCell align="right">Total</TableCell>
                     <TableCell>
-                      {this.props.items.reduce(function(a, b) {
-                        return a.price + b.price;
-                      }, 0)}
+                      {}
                     </TableCell>
                   </TableRow>
                 </TableBody>
