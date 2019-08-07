@@ -8,9 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
-import {removeFromCart} from './actions/cartActions';
-import Popover from '@material-ui/core/Popover';
-//TODO: popover of description for each item on table?
+import Shoppingrow from './Shoppingrow'
 
 
 const mapStateToProps = (state)=>{
@@ -19,17 +17,8 @@ const mapStateToProps = (state)=>{
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return{
-      removeFromCart: (menuItem)=>{dispatch(removeFromCart(menuItem))}
-    }
-}
-
 class Shopping extends React.Component{
-
-  handleDelete = (item) => {
-    this.props.removeFromCart(item);
-  }
+ 
 
     render()
     {
@@ -46,7 +35,6 @@ class Shopping extends React.Component{
             fullWidth
             onClose={this.props.close}
           >
-            {console.log(this.props.items)}
             {this.props.items.length !== undefined &&
             this.props.items.length === 0 ? (
               <div>
@@ -66,8 +54,8 @@ class Shopping extends React.Component{
                   <Grid item>
                     Welcome to your favorites! As you browse our website
                     you can add any items that interest you so there's
-                    no need to jump back and forth while browsing or
-                    ordering! Thanks for visiting our website!{" "}
+                    no need to jump back and forth while deciding!
+                    Thanks for visiting our website!{" "}
                   </Grid>
                   <Grid item>
                     Tap/click on any items from the menus to reveal an
@@ -76,35 +64,37 @@ class Shopping extends React.Component{
                 </Grid>
               </div>
             ) : (
-              <Table>
-                <TableHead>
-                  <TableCell />
-                  <TableCell>Item</TableCell>
-                  <TableCell>Price</TableCell>
-                </TableHead>
-                <TableBody>
-                  {this.props.items.map(item => (
-                    <TableRow key={item.name}>
-                      <TableCell>
-                        <Icon onClick={() => this.handleDelete(item)}>
-                          delete_outline
-                        </Icon>
-                      </TableCell>
-                      <TableCell>{item.name}</TableCell>
-                      <TableCell>${item.price}</TableCell>
-                    </TableRow>
-                  ))}
-                  <TableRow>
+              <React.Fragment>
+                <p className="fav-text">
+                  {" "}
+                  Click on any item name on list for description and
+                  photo (if they are available)
+                </p>
+                <Table>
+                  <TableHead>
                     <TableCell />
-                    <TableCell align="right">Total</TableCell>
-                    <TableCell>${total}</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+                    <TableCell>Item</TableCell>
+                    <TableCell>Price</TableCell>
+                  </TableHead>
+                  <TableBody>
+                    {this.props.items.map(item => (
+                      <Shoppingrow item={item} />
+                    ))}
+                    <TableRow>
+                      <TableCell />
+                      <TableCell align="right">Total</TableCell>
+                      <TableCell>${total}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+                <p className="disclaimer">
+                  **Prices and item availability are not guaranteed
+                </p>
+              </React.Fragment>
             )}
           </Dialog>
         );
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shopping);
+export default connect(mapStateToProps)(Shopping);

@@ -22,21 +22,29 @@ class MenuItem extends Component {
     showHeart: false,
     activeHeart: false
   };
+
+  timer = null;
+
   handleClickAdd = name => {
     this.props.addToCart(name);
     this.setState({ activeHeart: true });
+    this.setState({ showHeart: true });
+    clearTimeout(this.timer);
   };
 
   handleClickRemove = item => {
     this.props.removeFromCart(item);
     this.setState({ activeHeart: false });
+    this.setState({ showHeart: true });
+    clearTimeout(this.timer);
   };
 
   handleBoxClick = () => {
     this.setState({ showHeart: true });
-    setTimeout(() => {
-      this.setState({ showHeart: false });
-    }, 2000);
+    clearTimeout(this.timer);
+      this.timer = setTimeout(() => {
+        this.setState({ showHeart: false });
+      }, 2000);
   };
 
   componentDidMount = () => {
@@ -50,7 +58,7 @@ class MenuItem extends Component {
 
   render() {
     return (
-      <li onClick={() => this.handleBoxClick()}>
+      <li onDoubleClick={() => alert("hi")} onClick={() => this.handleBoxClick()}>
         {this.props.item.name} {this.props.item.price}{" "}
         {this.state.showHeart && (
           <Icon

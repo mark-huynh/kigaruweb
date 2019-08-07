@@ -76,11 +76,11 @@ class App extends React.Component {
                 right: "0",
                 zIndex: 2,
                 marginRight: "5px",
-                marginBottom: "5px"
+                marginBottom: "10px"
               }}
-              size="small"
+              size={this.state.isDesktop ? "large": "small"}
             >
-              <Icon color={"error"}>favorite_border</Icon>
+              <Icon style={this.state.isDesktop ? {fontSize:"40px"}: {fontSize:"30px"}} color={"error"}>favorite_border</Icon>
             </Fab>
           </Pop>
           <Shopping open={this.state.showDialog} close={this.handleClose} />

@@ -58,7 +58,7 @@ function Mobilenav(){
               open={shouldOpen}
               onClose={() => setOpen(false)}
             >
-              <List className={classes.list}>
+              <List onClick={() => setOpen(false)} className={classes.list}>
                 <ListItem className={classes.top}>
                   KIGARU SUSHI
                 </ListItem>
@@ -151,7 +151,7 @@ function Mobilenav(){
               onClick={() => setOpen(true)}
               className={classes.root}
             >
-              <Icon>menu</Icon>
+              <Icon style={{fontSize: '30px'}}>menu</Icon>
             </IconButton>
           </React.Fragment>
         );
