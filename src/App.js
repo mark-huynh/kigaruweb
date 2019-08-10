@@ -12,6 +12,12 @@ import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 import Shopping from "./Shopping";
 import posed from "react-pose";
+import {nigiri} from './food/nigiri'
+import {gunkan} from './food/gunkan'
+import {makirolls} from './food/makirolls'
+import {appetizers} from './food/appetizers'
+import * as maindish from './food/maindish'  
+import * as drinks from './food/drinks'  
 
 const Pop = posed.div({
   static: {},
@@ -56,17 +62,44 @@ class App extends React.Component {
     return (
       <HashRouter basename="/">
         <div>
-          {/* <Router> */}
           {this.state.isDesktop ? <Navbar /> : <Mobilenav />}
           <Route exact path="/" component={Home} />
           <Route
             path="/sushi"
-            component={() => <Sushi desktop={this.state.isDesktop} />}
+            component={() => (
+              <Sushi
+                nigiri={nigiri}
+                gunkan={gunkan}
+                makirolls={makirolls}
+                desktop={this.state.isDesktop}
+              />
+            )}
           />
-          <Route path="/appetizers" component={Appetizers} />
-          <Route path="/maindish" component={Maindish} />
-          <Route path="/drinks" component={Drinks} />
-          {/* </Router> */}
+          <Route
+            path="/appetizers"
+            component={() => <Appetizers appetizers={appetizers} />}
+          />
+          <Route
+            path="/maindish"
+            component={() => (
+              <Maindish
+                japaneseCurry={maindish.japaneseCurry}
+                noodles={maindish.noodles}
+                donburi={maindish.donburi}
+              />
+            )}
+          />
+          <Route
+            path="/drinks"
+            component={() => (
+              <Drinks
+                beer={drinks.beer}
+                chuHi={drinks.chuHi}
+                softDrinks={drinks.softDrinks}
+                dessert={drinks.dessert}
+              />
+            )}
+          />
           <Pop pose={this.state.showDialog ? "static" : "grow"}>
             <Fab
               onClick={this.handleClickButton}
@@ -78,9 +111,18 @@ class App extends React.Component {
                 marginRight: "5px",
                 marginBottom: "10px"
               }}
-              size={this.state.isDesktop ? "large": "small"}
+              size={this.state.isDesktop ? "large" : "small"}
             >
-              <Icon style={this.state.isDesktop ? {fontSize:"40px"}: {fontSize:"30px"}} color={"error"}>favorite_border</Icon>
+              <Icon
+                style={
+                  this.state.isDesktop
+                    ? { fontSize: "40px" }
+                    : { fontSize: "30px" }
+                }
+                color={"error"}
+              >
+                favorite_border
+              </Icon>
             </Fab>
           </Pop>
           <Shopping open={this.state.showDialog} close={this.handleClose} />
