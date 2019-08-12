@@ -38,6 +38,17 @@ class Home extends React.Component {
   componentDidMount() {
     setTimeout(this.toggle, 1300);
   }
+
+  handleMap = () => {
+    if /* if we're on iOS, open in Apple Maps */
+      ((navigator.platform.indexOf("iPhone") != -1) || 
+       (navigator.platform.indexOf("iPad") != -1) || 
+       (navigator.platform.indexOf("iPod") != -1))
+      window.open("maps://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
+  else /* else use Google */
+      window.open("https://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
+}
+
   render() {
     return (
       <div className="main">
@@ -59,7 +70,7 @@ class Home extends React.Component {
           className="kigaru-image"
           src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"
         />
-        <ul className="hours">
+        <ul className="hours" style={{cursor: 'pointer'}} onClick={this.handleMap}>
           <li>Monday - Saturday: 5PM - 11PM</li>
           <li>Sunday : Closed</li>
           <br />

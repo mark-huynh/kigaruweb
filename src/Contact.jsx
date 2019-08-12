@@ -21,9 +21,9 @@ class Drinks extends React.Component {
           ((navigator.platform.indexOf("iPhone") != -1) || 
            (navigator.platform.indexOf("iPad") != -1) || 
            (navigator.platform.indexOf("iPod") != -1))
-          window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+          window.open("maps://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
       else /* else use Google */
-          window.open("https://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+          window.open("https://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
   }
 
   render() {
@@ -35,7 +35,7 @@ class Drinks extends React.Component {
         <div className="contact-form">
           <ul>
             <Paper elevation={3} style={{margin: '20px'}}>
-              <div onClick={this.handleMap}>
+              <div onClick={this.handleMap} style={{cursor: 'pointer'}}>
                 <li>
                   <img src={location} />
                   <p>

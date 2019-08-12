@@ -74,6 +74,7 @@ class MenuItem extends Component {
           </Icon>
         )}
         <p>{this.props.item.description}</p>
+        {this.props.item.picture !== undefined && this.props.item.picture !== "" && <Icon>crop_original</Icon>}
       </li>
     );
   }

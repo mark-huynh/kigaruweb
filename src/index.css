@@ -59,7 +59,7 @@ body{
 
 .hours{
   font-family: Lato;
-  font-size: 5vw;
+  font-size: 3vw;
   display: inline-block;
   width: 50vw;
   padding: 0;
@@ -280,4 +280,8 @@ a{
 
 .contact-form img{
   width: 5vw;
+}
+
+.contact-form a:link{
+  text-decoration: none;
 }
