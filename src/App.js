@@ -11,6 +11,7 @@ import Drinks from "./Drinks";
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 import Shopping from "./Shopping";
+import Contact from "./Contact";
 import posed from "react-pose";
 import {appetizers} from './food/appetizers'
 import * as maindish from './food/maindish'  
@@ -95,6 +96,13 @@ class App extends React.Component {
                 chuHi={drinks.chuHi}
                 softDrinks={drinks.softDrinks}
                 dessert={drinks.dessert}
+              />
+            )}
+          />
+          <Route
+            path="/contact"
+            component={() => (
+              <Contact
               />
             )}
           />

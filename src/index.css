@@ -255,3 +255,29 @@ a{
 *{
   touch-action: none;
 }
+
+.contact-form{
+  font-family: Montserrat;
+  z-index: 2;
+  background: white;
+  text-align: center;
+}
+
+.contact-form ul{
+  padding: 0;
+  text-align: center;
+}
+
+.contact-form img{
+  display: inline-block;
+}
+
+.contact-form li{
+  list-style: none;
+  padding: 20px;
+  margin: 20px;
+}
+
+.contact-form img{
+  width: 5vw;
+}
