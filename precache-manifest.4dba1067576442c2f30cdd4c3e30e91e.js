@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "44cc30c30135bfd2bb3f7b5b4a33953d",
-    "url": "/kigaruweb/static/media/appetizer.44cc30c3.svg"
+    "revision": "133ce3f86906cf46c6618abb24212cfe",
+    "url": "/kigaruweb/static/media/home.133ce3f8.svg"
   },
   {
-    "revision": "617d60cca20716722063",
-    "url": "/kigaruweb/static/css/main.6b863ac2.chunk.css"
+    "revision": "ff6891fcfea3a6ddec62",
+    "url": "/kigaruweb/static/css/main.6d1f54c6.chunk.css"
   },
   {
     "revision": "ca08303686ec7d9e0b80",
     "url": "/kigaruweb/static/js/runtime~main.47433b6f.js"
   },
   {
-    "revision": "1a264a93243cf94e9430",
-    "url": "/kigaruweb/static/js/2.58f95568.chunk.js"
+    "revision": "d8d90c0c84e0800f28f9",
+    "url": "/kigaruweb/static/js/2.29585f1d.chunk.js"
   },
   {
     "revision": "91e69747872c1ffa8418cb3777430fb7",
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/wall1.14620e15.jpg"
   },
   {
-    "revision": "617d60cca20716722063",
-    "url": "/kigaruweb/static/js/main.2dc6d165.chunk.js"
+    "revision": "44cc30c30135bfd2bb3f7b5b4a33953d",
+    "url": "/kigaruweb/static/media/appetizer.44cc30c3.svg"
   },
   {
     "revision": "216305e9950d2bf7d9ef2ba0d40d511d",
     "url": "/kigaruweb/static/media/beer.216305e9.svg"
   },
   {
-    "revision": "133ce3f86906cf46c6618abb24212cfe",
-    "url": "/kigaruweb/static/media/home.133ce3f8.svg"
+    "revision": "ff6891fcfea3a6ddec62",
+    "url": "/kigaruweb/static/js/main.bf83985d.chunk.js"
   },
   {
     "revision": "c005cbdf57454188e4ac4cf6d65a6a09",
@@ -48,7 +48,19 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/sushi.d5bfd4e9.svg"
   },
   {
-    "revision": "41599aa64e8e37ddefe0ed8b29d7fc87",
+    "revision": "523b64995d5726cfdc302a1678f136ed",
+    "url": "/kigaruweb/static/media/location.523b6499.svg"
+  },
+  {
+    "revision": "8b2f97f7283bdeb39650b0f5a7a065bd",
+    "url": "/kigaruweb/static/media/phone.8b2f97f7.svg"
+  },
+  {
+    "revision": "4d9e5a2040325df11d9757258a7c9ba5",
+    "url": "/kigaruweb/static/media/envelope.4d9e5a20.svg"
+  },
+  {
+    "revision": "36297400dea409a16cc65f7d7a25fd92",
     "url": "/kigaruweb/index.html"
   }
 ];
