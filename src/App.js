@@ -12,12 +12,10 @@ import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 import Shopping from "./Shopping";
 import posed from "react-pose";
-import {nigiri} from './food/nigiri'
-import {gunkan} from './food/gunkan'
-import {makirolls} from './food/makirolls'
 import {appetizers} from './food/appetizers'
 import * as maindish from './food/maindish'  
 import * as drinks from './food/drinks'  
+import * as sushi from './food/sushi'  
 
 const Pop = posed.div({
   static: {},
@@ -68,9 +66,9 @@ class App extends React.Component {
             path="/sushi"
             component={() => (
               <Sushi
-                nigiri={nigiri}
-                gunkan={gunkan}
-                makirolls={makirolls}
+                nigiri={sushi.nigiri}
+                gunkan={sushi.gunkan}
+                makirolls={sushi.makirolls}
                 desktop={this.state.isDesktop}
               />
             )}
