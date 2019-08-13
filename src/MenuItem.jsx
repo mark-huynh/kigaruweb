@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import {addToCart} from './actions/cartActions';
 import {removeFromCart} from './actions/cartActions';
 import Icon from '@material-ui/core/Icon';
+import Dialog from '@material-ui/core/Dialog';
+
 
 const mapDispatchToProps =(dispatch) =>{
     return{
@@ -20,7 +22,8 @@ const mapStateToProps = (state)=>{
 class MenuItem extends Component {
   state = {
     showHeart: false,
-    activeHeart: false
+    activeHeart: false,
+    showImage: false
   };
 
   timer = null;
@@ -42,9 +45,9 @@ class MenuItem extends Component {
   handleBoxClick = () => {
     this.setState({ showHeart: true });
     clearTimeout(this.timer);
-      this.timer = setTimeout(() => {
-        this.setState({ showHeart: false });
-      }, 2000);
+    this.timer = setTimeout(() => {
+      this.setState({ showHeart: false });
+    }, 2000);
   };
 
   componentDidMount = () => {
@@ -58,7 +61,16 @@ class MenuItem extends Component {
 
   render() {
     return (
-      <li onDoubleClick={() => alert("hi")} onClick={() => this.handleBoxClick()}>
+      <li
+        onDoubleClick={() => alert("hi")}
+        onClick={() => this.handleBoxClick()}
+      >
+        {this.props.item.picture !== undefined &&
+          this.props.item.picture !== "" && (
+            <Icon style={{margin: 'auto'}} onClick={() => this.setState({ showImage: true })}>
+              crop_original
+            </Icon>
+          )}
         {this.props.item.name} {this.props.item.price}{" "}
         {this.state.showHeart && (
           <Icon
@@ -74,10 +86,21 @@ class MenuItem extends Component {
           </Icon>
         )}
         <p>{this.props.item.description}</p>
-        {this.props.item.picture !== undefined && this.props.item.picture !== "" && <Icon>crop_original</Icon>}
+        <Dialog
+          open={this.state.showImage}
+          fullWidth
+          onClose={() => {
+            this.setState({ showImage: false });
+          }}
+        >
+          <img src={this.props.item.picture} />
+        </Dialog>
       </li>
     );
   }
 }
 
-export default connect (mapStateToProps, mapDispatchToProps)(MenuItem);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MenuItem);

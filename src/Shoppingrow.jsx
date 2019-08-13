@@ -46,12 +46,17 @@ class Shoppingrow extends Component {
                 horizontal: 'center',
               }}
             >
-              {this.props.item.description !== "" && this.props.item.description !== undefined
+              {this.props.item.description !== undefined && this.props.item.description !== ""
                 ? <p className="fav-text">
                     {this.props.item.description}
                 </p>
                 : <p className="fav-text">
                     No Description Available
+                </p>}
+              {this.props.item.picture !== undefined && this.props.item.picture !== ""
+                ? <img src={this.props.item.picture}/>
+                : <p className="fav-text">
+                    No Picture Available
                 </p>}
             </Popover>
             <TableRow
