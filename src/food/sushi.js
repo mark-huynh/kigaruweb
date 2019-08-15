@@ -41,7 +41,7 @@ export const nigiri = [
   },
   {
     name: "Octopus",
-    price: 2.25,
+    price: 300,
     description: "",
     picture: ""
   },
@@ -232,7 +232,7 @@ export const makirolls = [
     name: "Takocado Roll",
     price: 5.5,
     description: "Octopus & avocado",
-    picture: ""
+    price: 300,
   },
   {
     name: "*California Roll",
