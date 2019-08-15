@@ -35,7 +35,7 @@ export const nigiri = [
   },
   {
     name: "*Mackerel",
-    price: 2,
+    price: 500,
     description: "",
     picture: ""
   },
@@ -89,7 +89,7 @@ export const nigiri = [
   },
   {
     name: "*Seared Mackerel",
-    price: 2,
+    price: 500,
     description: "",
     picture: ""
   },
