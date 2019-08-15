@@ -47,7 +47,7 @@ export const nigiri = [
   },
   {
     name: "Egg",
-    price: 1.75,
+    price: 123,
     description: "",
     picture: ""
   },
@@ -338,7 +338,7 @@ export const gunkan = [
   },
   {
     name: "*Flying Fish Egg",
-    price: 3.75,
+    price: 123,
     description: "",
     picture: ""
   },
