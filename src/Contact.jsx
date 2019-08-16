@@ -1,6 +1,4 @@
 import React from "react";
-import Menu from "./Menu.jsx";
-import MenuContainer from "./MenuContainer";
 import wall from "./pictures/backgrounds/wall2.jpg";
 import location from './pictures/location.svg';
 import phone from './pictures/phone.svg';
@@ -18,9 +16,9 @@ class Drinks extends React.Component {
 
   handleMap = () => {
         if /* if we're on iOS, open in Apple Maps */
-          ((navigator.platform.indexOf("iPhone") != -1) || 
-           (navigator.platform.indexOf("iPad") != -1) || 
-           (navigator.platform.indexOf("iPod") != -1))
+          ((navigator.platform.indexOf("iPhone") !== -1) || 
+           (navigator.platform.indexOf("iPad") !== -1) || 
+           (navigator.platform.indexOf("iPod") !== -1))
           window.open("maps://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
       else /* else use Google */
           window.open("https://maps.google.com/maps?daddr=45.494578,-122.809017&amp;ll=");
@@ -37,7 +35,7 @@ class Drinks extends React.Component {
             <Paper elevation={3} style={{margin: '20px'}}>
               <div onClick={this.handleMap} style={{cursor: 'pointer'}}>
                 <li>
-                  <img src={location} />
+                  <img src={location} alt="location pointer"/>
                   <p>
                       Click to open maps to Kigaru (iOS or Android!)
                   </p>
@@ -47,7 +45,7 @@ class Drinks extends React.Component {
             <Paper elevation={3} style={{margin: '20px'}}>
               <a href="tel:123-123-1234">
                 <li>
-                  <img src={phone} />
+                  <img src={phone} alt="phone"/>
                   <p>
                       Call Us @123-123-1234
                   </p>
@@ -57,7 +55,7 @@ class Drinks extends React.Component {
             <Paper elevation={3} style={{margin: '20px'}}>
               <a href="mailto:test@gmail.com">
                 <li>
-                  <img src={envelope} />
+                  <img src={envelope} alt="envelope"/>
                   <p>
                       Email Us test@gmail.com
                   </p>

@@ -1,5 +1,3 @@
-import wall from "../pictures/backgrounds/wall2.jpg";
-
 //DO NOT FORMAT: Descriptions that are too long get cut
 
 export const nigiri = [
@@ -7,7 +5,7 @@ export const nigiri = [
     name: "*Squid",
     price: 1.75,
     description: "",
-    picture: wall
+    picture: ""
   },
   {
     name: "Shrimp",
@@ -232,7 +230,7 @@ export const makirolls = [
     name: "Takocado Roll",
     price: 5.5,
     description: "Octopus & avocado",
-    price: 300,
+    picture: "",
   },
   {
     name: "*California Roll",

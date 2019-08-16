@@ -285,3 +285,10 @@ a{
 .contact-form a:link{
   text-decoration: none;
 }
+
+.info-wrap{
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -67,7 +67,7 @@ class Shopping extends React.Component{
               <React.Fragment>
                 <p className="fav-text">
                   {" "}
-                  Click on any item name on list for description and
+                  Click on any item name for their description and
                   photo (if they are available)
                 </p>
                 <Table>

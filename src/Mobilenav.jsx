@@ -71,7 +71,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Home">
                     <ListItemIcon>
-                      <img src={home} />
+                      <img src={home} alt="home"/>
                     </ListItemIcon>
                     Home
                   </ListItem>
@@ -85,7 +85,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Sushi">
                     <ListItemIcon>
-                      <img src={sushi} />
+                      <img src={sushi} alt="sushi"/>
                     </ListItemIcon>
                     Sushi Bar
                   </ListItem>
@@ -98,7 +98,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Appetizers">
                     <ListItemIcon>
-                      <img src={skewer} />
+                      <img src={skewer} alt="appetizers"/>
                     </ListItemIcon>
                     Appetizers
                   </ListItem>
@@ -112,7 +112,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Main">
                     <ListItemIcon>
-                      <img src={noodle} />
+                      <img src={noodle} alt="main dishes"/>
                     </ListItemIcon>
                     Main Dish
                   </ListItem>
@@ -126,7 +126,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Drinks">
                     <ListItemIcon>
-                      <img src={beer} />
+                      <img src={beer} alt="drinks"/>
                     </ListItemIcon>
                     Drinks
                   </ListItem>
@@ -140,7 +140,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Contact">
                     <ListItemIcon>
-                      <img src={sending} />
+                      <img src={sending} alt="contact"/>
                     </ListItemIcon>
                     Contact
                   </ListItem>

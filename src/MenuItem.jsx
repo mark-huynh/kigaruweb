@@ -61,13 +61,12 @@ class MenuItem extends Component {
 
   render() {
     return (
-      <li
-        onDoubleClick={() => alert("hi")}
+      <li style={{maxWidth: '650px'}}
         onClick={() => this.handleBoxClick()}
       >
         {this.props.item.picture !== undefined &&
           this.props.item.picture !== "" && (
-            <Icon style={{margin: 'auto'}} onClick={() => this.setState({ showImage: true })}>
+            <Icon style={{marginRight: '7px', fontSize: '20px', verticalAlign: 'bottom'}} onClick={() => this.setState({ showImage: true })}>
               crop_original
             </Icon>
           )}
@@ -93,7 +92,7 @@ class MenuItem extends Component {
             this.setState({ showImage: false });
           }}
         >
-          <img src={this.props.item.picture} />
+          <img src={this.props.item.picture} alt={this.props.name}/>
         </Dialog>
       </li>
     );
