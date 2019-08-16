@@ -70,7 +70,9 @@ class MenuItem extends Component {
               crop_original
             </Icon>
           )}
-        {this.props.item.name} {this.props.item.price}{" "}
+        <div className="item-title">
+          {this.props.item.name} {this.props.item.price}
+        </div>{" "}
         {this.state.showHeart && (
           <Icon
             style={{ fontSize: "medium", paddingLeft: "7px" }}
@@ -84,7 +86,7 @@ class MenuItem extends Component {
             favorite
           </Icon>
         )}
-        <p>{this.props.item.description}</p>
+        <p className="description">{this.props.item.description}</p>
         <Dialog
           open={this.state.showImage}
           fullWidth

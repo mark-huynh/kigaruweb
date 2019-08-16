@@ -292,3 +292,11 @@ a{
   justify-content: center;
   align-items: center;
 }
+
+.item-title{
+  font-size: 110%;
+}
+
+.description{
+  font-style: italic;
+}
