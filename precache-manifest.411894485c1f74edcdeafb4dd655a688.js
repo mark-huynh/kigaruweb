@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/home.133ce3f8.svg"
   },
   {
-    "revision": "a0adf75d89c2103bb589",
-    "url": "/kigaruweb/static/css/main.dccf5059.chunk.css"
+    "revision": "c5959279e27beefe9ee2",
+    "url": "/kigaruweb/static/css/main.9332af3a.chunk.css"
   },
   {
     "revision": "ca08303686ec7d9e0b80",
     "url": "/kigaruweb/static/js/runtime~main.47433b6f.js"
   },
   {
-    "revision": "d3fcb678c7150035e750",
-    "url": "/kigaruweb/static/js/2.fc07d231.chunk.js"
+    "revision": "ae973ea99051ed415633",
+    "url": "/kigaruweb/static/js/2.049f4d3a.chunk.js"
   },
   {
     "revision": "91e69747872c1ffa8418cb3777430fb7",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/beer.216305e9.svg"
   },
   {
-    "revision": "a0adf75d89c2103bb589",
-    "url": "/kigaruweb/static/js/main.842a6973.chunk.js"
+    "revision": "c5959279e27beefe9ee2",
+    "url": "/kigaruweb/static/js/main.d24ded80.chunk.js"
   },
   {
     "revision": "c005cbdf57454188e4ac4cf6d65a6a09",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/envelope.4d9e5a20.svg"
   },
   {
-    "revision": "43edea81763d00ab76036f081d9edd71",
+    "revision": "2392445c3f30d1454853660b8fcfa602",
     "url": "/kigaruweb/index.html"
   }
 ];
