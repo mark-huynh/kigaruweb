@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/js/runtime~main.47433b6f.js"
   },
   {
-    "revision": "c819824f1a996d3e618f",
-    "url": "/kigaruweb/static/js/2.b5a218a6.chunk.js"
+    "revision": "d3fcb678c7150035e750",
+    "url": "/kigaruweb/static/js/2.fc07d231.chunk.js"
   },
   {
     "revision": "91e69747872c1ffa8418cb3777430fb7",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/envelope.4d9e5a20.svg"
   },
   {
-    "revision": "c0773495ec53028b67d8c3b2af1affde",
+    "revision": "43edea81763d00ab76036f081d9edd71",
     "url": "/kigaruweb/index.html"
   }
 ];
