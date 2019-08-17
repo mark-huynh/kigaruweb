@@ -54,7 +54,7 @@ class Shoppingrow extends Component {
                     No Description Available
                 </p>}
               {this.props.item.picture !== undefined && this.props.item.picture !== ""
-                ? <img src={this.props.item.picture} alt={this.props.item.name} style={{width: '100vw'}}/>
+                ? <img src={this.props.item.picture} alt={this.props.item.name} style={{width: '60vh'}}/>
                 : <p className="fav-text">
                     No Picture Available
                 </p>}

@@ -89,12 +89,12 @@ class MenuItem extends Component {
         <p className="description">{this.props.item.description}</p>
         <Dialog
           open={this.state.showImage}
-          fullWidth
+          maxWidth='xl'
           onClose={() => {
             this.setState({ showImage: false });
           }}
         >
-          <img src={this.props.item.picture} alt={this.props.name}/>
+          <img style={{width: '65vw'}} src={this.props.item.picture} alt={this.props.name}/>
         </Dialog>
       </li>
     );

@@ -1,3 +1,4 @@
+import chirashidon from '../pictures/food/chirashidon.jpg'
 export const japaneseCurry = [
          {
            name: "Beef Curry",
@@ -99,7 +100,7 @@ export const noodles = [
       name: "*Chirashi Don",
       price: 19,
       description: "Sushi rice topped with chef’s choice of sashimi",
-      picture: ""
+    picture: chirashidon,
     },
     {
       name: "*Pork Katsu Don",
