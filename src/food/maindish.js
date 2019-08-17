@@ -1,3 +1,4 @@
+import tonkotsuramen from '../pictures/food/tonkotsuramen.jpg'
 import chirashidon from '../pictures/food/chirashidon.jpg'
 export const japaneseCurry = [
          {
@@ -61,7 +62,7 @@ export const noodles = [
       name: "*Tonkotsu Ramen",
       price: 11,
       description: "Pork broth, topped with egg, sliced pork, bamboo shoots, green onion, seaweed",
-      picture: ""
+    picture: tonkotsuramen,
     },
     {
       name: "*Tonkotsu Shoyu Ramen",
