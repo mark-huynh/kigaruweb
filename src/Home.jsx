@@ -63,7 +63,7 @@ class Home extends React.Component {
             <FadeIn pose={this.state.isOpen ? "open" : "closed"}>
               KIGARU SUSHI
             </FadeIn>
-            <Description pose={this.state.isOpen ? "open" : "closed"}>
+            <Description pose={this.state.isOpen ? "open" : "closed"} onClick={this.props.handleListClick} >
               <DescriptionItem>Japanese Cusine</DescriptionItem>
               <DescriptionItem>Sushi</DescriptionItem>
               <DescriptionItem>Ramen</DescriptionItem>

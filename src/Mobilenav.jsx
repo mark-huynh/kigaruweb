@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     }
 });
 
-function Mobilenav(){
+function Mobilenav(props){
 
     const [shouldOpen, setOpen] = useState(false);
         const classes = useStyles();
@@ -55,10 +55,19 @@ function Mobilenav(){
             <Drawer
               className={classes.drawer}
               anchor="left"
-              open={shouldOpen}
-              onClose={() => setOpen(false)}
+              open={shouldOpen || props.openDrawer}
+              onClose={() => {
+                setOpen(false);
+                props.closeDrawer();
+              }}
             >
-              <List onClick={() => setOpen(false)} className={classes.list}>
+              <List
+                onClick={() =>{
+                setOpen(false);
+                props.closeDrawer();
+              }}
+                className={classes.list}
+              >
                 <ListItem className={classes.top}>
                   KIGARU SUSHI
                 </ListItem>
@@ -85,7 +94,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Sushi">
                     <ListItemIcon>
-                      <img src={sushi} alt="sushi"/>
+                      <img src={sushi} alt="sushi" />
                     </ListItemIcon>
                     Sushi Bar
                   </ListItem>
@@ -98,7 +107,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Appetizers">
                     <ListItemIcon>
-                      <img src={skewer} alt="appetizers"/>
+                      <img src={skewer} alt="appetizers" />
                     </ListItemIcon>
                     Appetizers
                   </ListItem>
@@ -112,7 +121,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Main">
                     <ListItemIcon>
-                      <img src={noodle} alt="main dishes"/>
+                      <img src={noodle} alt="main dishes" />
                     </ListItemIcon>
                     Main Dish
                   </ListItem>
@@ -126,7 +135,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Drinks">
                     <ListItemIcon>
-                      <img src={beer} alt="drinks"/>
+                      <img src={beer} alt="drinks" />
                     </ListItemIcon>
                     Drinks
                   </ListItem>
@@ -140,7 +149,7 @@ function Mobilenav(){
                 >
                   <ListItem button key="Contact">
                     <ListItemIcon>
-                      <img src={sending} alt="contact"/>
+                      <img src={sending} alt="contact" />
                     </ListItemIcon>
                     Contact
                   </ListItem>
@@ -151,7 +160,7 @@ function Mobilenav(){
               onClick={() => setOpen(true)}
               className={classes.root}
             >
-              <Icon style={{fontSize: '30px'}}>menu</Icon>
+              <Icon style={{ fontSize: "30px" }}>menu</Icon>
             </IconButton>
           </React.Fragment>
         );

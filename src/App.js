@@ -28,7 +28,7 @@ const Pop = posed.div({
 class App extends React.Component {
   state = {
     isDesktop: false,
-    openSide: false,
+    openDrawer: false,
     showDialog: false
   };
 
@@ -61,8 +61,10 @@ class App extends React.Component {
     return (
       <HashRouter basename="/">
         <div>
-          {this.state.isDesktop ? <Navbar /> : <Mobilenav />}
-          <Route exact path="/" component={Home} />
+          {this.state.isDesktop ? <Navbar /> : <Mobilenav openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
+          <Route exact path="/" render={ () => (<Home
+            handleListClick={() => this.setState({openDrawer: true})}
+          />)} />
           <Route
             path="/sushi"
             component={() => (
@@ -76,11 +78,11 @@ class App extends React.Component {
           />
           <Route
             path="/appetizers"
-            component={() => <Appetizers appetizers={appetizers} />}
+            render={() => <Appetizers appetizers={appetizers} />}
           />
           <Route
             path="/maindish"
-            component={() => (
+            render={() => (
               <Maindish
                 japaneseCurry={maindish.japaneseCurry}
                 noodles={maindish.noodles}
@@ -90,7 +92,7 @@ class App extends React.Component {
           />
           <Route
             path="/drinks"
-            component={() => (
+            render={() => (
               <Drinks
                 beer={drinks.beer}
                 chuHi={drinks.chuHi}
@@ -101,7 +103,7 @@ class App extends React.Component {
           />
           <Route
             path="/contact"
-            component={() => (
+            render={() => (
               <Contact
               />
             )}
