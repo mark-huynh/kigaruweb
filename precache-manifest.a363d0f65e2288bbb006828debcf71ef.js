@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/noodle.c005cbdf.svg"
   },
   {
-    "revision": "5126a5041b0b38ef382e",
+    "revision": "5c3f62c4a4623a6af189",
     "url": "/kigaruweb/static/css/main.bff58fca.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/home.133ce3f8.svg"
   },
   {
-    "revision": "5126a5041b0b38ef382e",
-    "url": "/kigaruweb/static/js/main.7168b245.chunk.js"
+    "revision": "5c3f62c4a4623a6af189",
+    "url": "/kigaruweb/static/js/main.5ac1c146.chunk.js"
   },
   {
     "revision": "b3f066f2bbcb460e0c736c4256a98860",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/kigaruweb/static/media/chirashidon.280ec53a.jpg"
   },
   {
-    "revision": "c9c051dbc1c6bb2893eec42e5c18a31e",
+    "revision": "77bc2d74fa32d1f4b2bcd65a00d08a83",
     "url": "/kigaruweb/index.html"
   }
 ];
