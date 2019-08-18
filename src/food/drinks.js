@@ -1,3 +1,4 @@
+import img_20181212_202437 from '../pictures/food/img_20181212_202437.jpg'
 export const beer = [
   {
     name: "Bottle – Asahi (22oz)",
@@ -30,7 +31,7 @@ export const chuHi = [
     name: "Calpico Hi",
     price: 8.5,
     description: "Pint Glass",
-    picture: ""
+    picture: img_20181212_202437,
   },
   {
     name: "Lemon Hi",
