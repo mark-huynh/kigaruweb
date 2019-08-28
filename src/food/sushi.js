@@ -175,19 +175,19 @@ export const makirolls = [
   {
     name: "Giant Veggie Roll",
     price: 6.75,
-    description: "Avocado, cucumber, squash tempura, eggplant tempura, sesame seeds topped with edamame",
+    description: "Avocado, cucumber, squash tempura, eggplant tempura topped with edamame and sesame seeds",
     picture: ""
   },
   {
     name: "*Seven Samurai Roll",
-    price: 13.75,
+    price: 14,
     description: "Yellowtail, tuna, cucumber, topped with smoked salmon, Kigaru sauce & wasabi tobiko",
     picture: ""
   },
   {
     name: "Lobster Crab Roll",
     price: 16.75,
-    description: "Cajun-spiced lobster & real crab salad, avocado. Deep fried and topped with sesame seeds. Served with yakitori sauce for dipping",
+    description: "Lobster & real crab salad, avocado. Deep fried and topped with sesame seeds. Served with yakitori sauce for dipping",
     picture: ""
   },
   {
@@ -198,7 +198,7 @@ export const makirolls = [
   },
   {
     name: "*Negi Hama Roll",
-    price: 6,
+    price: 6.25,
     description: "Green onion & yellowtail",
     picture: ""
   },
@@ -211,12 +211,12 @@ export const makirolls = [
   {
     name: "*Salmon Skin Roll",
     price: 6.5,
-    description: "Salmon skin, avocado, radish sprouts, burdock root, cucumber, and cream cheese",
+    description: "Salmon skin, avocado, burdock root, cucumber, and cream cheese",
     picture: ""
   },
   {
     name: "*Spicy Tuna Roll",
-    price: 5.75,
+    price: 6,
     description: "Avocado & spicy tuna",
     picture: ""
   },
@@ -234,7 +234,7 @@ export const makirolls = [
   },
   {
     name: "*California Roll",
-    price: 4.75,
+    price: 5,
     description: "Krab, avocado, cucumber, smelt roe",
     picture: ""
   },
@@ -246,14 +246,14 @@ export const makirolls = [
   },
   {
     name: "*Vegas Roll",
-    price: 13.75,
+    price: 14,
     description: "Smoked salmon, crab salad, cream cheese, avocado. Deep fried and topped with eel sauce and smelt roe",
     picture: ""
   },
   {
     name: "*Salmon Lover Roll",
     price: 13.75,
-    description: "empura salmon, avocado, topped with salmon, tobiko, & lemon",
+    description: "Tempura salmon, avocado, topped with salmon, tobiko, & lemon",
     picture: ""
   },
   {
