@@ -228,7 +228,7 @@ export const makirolls = [
   },
   {
     name: "Takocado Roll",
-    price: 5.5,
+    price: 6.75,
     description: "Octopus & avocado",
     picture: "",
   },
@@ -258,7 +258,7 @@ export const makirolls = [
   },
   {
     name: "Shrimp Lover Roll",
-    price: 12,
+    price: 12.5,
     description:
       "Bay shrimp salad, avocado, topped with boiled shrimp and special sauce",
       picture: ""
@@ -272,39 +272,39 @@ export const makirolls = [
   },
   {
     name: "*Spider Roll (5pc)",
-    price: 9.5,
+    price: 10,
     description:
       "Soft shell crab, avocado, cucumber, smelt roe, sesame seeds, radish sprouts",
       picture: ""
   },
   {
     name: "Caterpillar Roll",
-    price: 17,
+    price: 18,
     description:"Eel, cucumber, krab, topped with avocado, sesame seeds, & eel sauce",
     picture: ""
   },
   {
     name: "*Raijin Roll",
     price: 16,
-    description: "California roll topped with spicy scallops and real crab",
+    description: "California roll topped with spicy baked scallops and real crab",
     picture: ""
   },
   {
     name: "*Fujin Roll",
-    price: 16,
+    price: 16.5,
     description: "Spicy tuna, avocado, cucumber, krab, topped with seared albacore, sesame seeds, jalapeno, & Kigaru sauce",
     picture: ""
   },
   {
     name: "*Hawaiian Roll",
-    price: 13,
-    description: "Spicy tuna, smelt roe, pineapple, topped with salmon, sesame seeds, eel sauce & mayo",
+    price: 13.5,
+    description: "Spicy tuna, pineapple, topped with salmon, sesame seeds, smelt roe, eel sauce & mayo",
     picture: ""
   },
   {
     name: "*Dragon Roll",
     price: 18,
-    description: "Shrimp tempura, cucumber, eel, krab, topped with avocado, eel sauce, smelt roe, and sesame seeds",
+    description: "Shrimp tempura, cucumber, krab, topped with avocado, eel, eel sauce, smelt roe, and sesame seeds",
     picture: ""
   }
 ];
