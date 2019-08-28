@@ -336,8 +336,8 @@ export const gunkan = [
   },
   {
     name: "*Flying Fish Egg",
-    price: 1.75,
-    description: "",
+    price: 3.75,
+    description: " ",
     picture: ""
   },
   {
@@ -354,7 +354,7 @@ export const gunkan = [
   },
   {
     name: "*Smelt Roe",
-    price: 2.75,
+    price: 2.5,
     description: "",
     picture: ""
   },
