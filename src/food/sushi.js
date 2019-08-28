@@ -3,7 +3,7 @@
 export const nigiri = [
   {
     name: "*Squid",
-    price: 1.75,
+    price: 2,
     description: "",
     picture: ""
   },
@@ -33,19 +33,19 @@ export const nigiri = [
   },
   {
     name: "*Mackerel",
-    price: 500,
+    price: 2,
     description: "",
     picture: ""
   },
   {
     name: "Octopus",
-    price: 300,
+    price: 2.25,
     description: "",
     picture: ""
   },
   {
     name: "Egg",
-    price: 123,
+    price: 1.75,
     description: "",
     picture: ""
   },
@@ -75,7 +75,7 @@ export const nigiri = [
   },
   {
     name: "*Surf Clam",
-    price: 1.75,
+    price: 2,
     description: "",
     picture: ""
   },
@@ -87,7 +87,7 @@ export const nigiri = [
   },
   {
     name: "*Seared Mackerel",
-    price: 500,
+    price: 2,
     description: "",
     picture: ""
   },
@@ -336,7 +336,7 @@ export const gunkan = [
   },
   {
     name: "*Flying Fish Egg",
-    price: 123,
+    price: 1.75,
     description: "",
     picture: ""
   },
