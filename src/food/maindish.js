@@ -3,7 +3,7 @@ import chirashidon from '../pictures/food/chirashidon.jpg'
 export const japaneseCurry = [
          {
            name: "Beef Curry",
-           price: 8.5,
+    price: 9,
            description: "Japanese style beef curry served over rice",
            picture: ""
          },
@@ -15,19 +15,19 @@ export const japaneseCurry = [
          },
          {
            name: "Gyoza Curry",
-           price: 10,
+    price: 11,
            description: "Japanese style beef curry and deep-fried dumplings served over rice",
            picture: ""
          },
          {
            name: "Fried Chicken Curry",
-           price: 11,
+    price: 11.5,
            description: "Japanese style beef curry and deep-fried chicken served over rice",
            picture: ""
          },
          {
            name: "Pork Katsu Curry",
-           price: 11,
+    price: 12,
            description: "Japanese style beef curry and deep-fried pork loin served over rice",
            picture: ""
          }
@@ -36,26 +36,26 @@ export const japaneseCurry = [
 export const noodles = [
     {
       name: "Kimchi Udon",
-      price: 9,
-      description: "Bonito broth with kimchi and spicy cod roe",
+    price: 9.5,
+    description: "Bonito broth with kimchi, spicy cod roe, green onion, and seaweed",
       picture: ""
     },
     {
       name: "Beef Udon",
-      price: 9.25,
-      description: "Bonito broth with beef, onion, green onion",
+    price: 9.75,
+    description: "Bonito broth with beef, onion, seaweed, and green onion",
       picture: ""
     },
     {
       name: "Tempura Udon",
-      price: 9.25,
-      description: "Bonito broth with green onion, served with shrimp tempura and vegetable tempura",
+    price: 9.75,
+    description: "Bonito broth with green onion and seaweed. Served with shrimp and vegetable tempura on the side",
       picture: ""
     },
     {
       name: "Pork Belly Udon",
-      price: 9.25,
-      description: "Bonito broth with braised pork belly",
+    price: 9.75,
+    description: "Bonito broth with braised pork belly, seaweed, onion, and green onion",
       picture: ""
     },
     {
