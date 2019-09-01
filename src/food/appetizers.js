@@ -1,5 +1,10 @@
 export const appetizers = [
     {
+      name: "Garlic Butter Scallops (3pc)",
+    price: 9.75,
+      description: "Scallops with garlic and butter topped with basil"
+    },
+    {
       name: "Garlic Edamame",
       price: 3.75,
       description: "Edamame sautéed with butter and garlic",
@@ -90,12 +95,6 @@ export const appetizers = [
       picture: ""
     },
     {
-      name: "Baked Scallops (3pc)",
-      price: 9.75,
-      description: "Scallops with garlic and butter",
-      picture: ""
-    },
-    {
       name: "Vegetable Gyoza (5pc)",
       price: 4.5,
       description: "Pan-fried veggie dumplings",
@@ -127,14 +126,14 @@ export const appetizers = [
     },
     {
       name: "Fried Shrimp (5pc)",
-      price: 9,
+    price: 8,
       description: "Panko-breaded shrimp with Kigaru tartar sauce",
       picture: ""
     },
     {
       name: "Pork Katsu",
       price: 8,
-      description: "Deep fried pork loin served with shredded cabbage, and katsu sauce",
+    description: "Deep fried panko-breaded pork loin served with shredded cabbage, and katsu sauce",
       picture: ""
     }
   ];
