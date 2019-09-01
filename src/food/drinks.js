@@ -1,5 +1,10 @@
 import img_20181212_202437 from '../pictures/food/img_20181212_202437.jpg'
 export const beer = [
+    {
+      name: "Bottle - IPA (12oz)",
+    price: 4.5,
+      description: ""
+    },
   {
     name: "Bottle – Asahi (22oz)",
     price: 7,
@@ -74,29 +79,39 @@ export const softDrinks = [
   },
   {
     name: "Coke, Diet Coke, Sprite, Root Beer",
-    price: 2.25,
+    price: 2,
     description: "",
     picture: ""
   }
 ];
 
 export const dessert = [
+    {
+      name: "Parfait",
+    price: 6.5,
+      description: "(Green Tea or Coconut)"
+    },
+    {
+      name: "Homemade Roll Cake",
+    price: 4.5,
+      description: ""
+    },
   {
     name: "Sesame Balls (5pc)",
-    price: 4.23,
+    price: 4,
     description: "",
     picture: ""
   },
   {
     name: "Ice Cream",
-    price: 3.5,
+    price: 3.75,
     description: "",
     picture: ""
   },
   {
     name: "Taiyaki Ice Cream",
-    price: 6,
-    description: "(Ice Cream Flavors: Red bean, Green Tea, or Coconut)",
+    price: 5.5,
+    description: "(Ice Cream Flavors: Red bean, Green Tea, Vanilla or Coconut)",
     picture: ""
   }
 ];

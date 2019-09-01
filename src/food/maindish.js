@@ -35,6 +35,11 @@ export const japaneseCurry = [
 
 export const noodles = [
     {
+      name: "Garlic Tonkotsu Ramen",
+    price: 12.5,
+      description: "Same as Tonkotsu ramen but with black garlic oil"
+    },
+    {
       name: "Kimchi Udon",
     price: 9.5,
     description: "Bonito broth with kimchi, spicy cod roe, green onion, and seaweed",
@@ -105,7 +110,7 @@ export const noodles = [
     },
     {
       name: "*Pork Katsu Don",
-      price: 9.5,
+    price: 10,
       description: "Rice bowl with pork katsu, onions, egg, and green onion",
       picture: ""
     },
