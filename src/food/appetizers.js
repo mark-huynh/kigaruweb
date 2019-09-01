@@ -6,12 +6,6 @@ export const appetizers = [
       picture: ""
     },
     {
-      name: "Chilled Tofu",
-      price: 4.5,
-      description: "Chilled tofu with kimchi, green onion & bonito flakes",
-      picture: ""
-    },
-    {
       name: "Kigaru French Fries",
       price: 3.75,
       description: "Spiral cut potato and french fries with okonomiyaki sauce & mayo on top",
@@ -20,19 +14,19 @@ export const appetizers = [
     {
       name: "Pork Belly Kakuni",
       price: 7.75,
-      description: "Braised pork belly served with Japanese mustard",
+    description: "Braised pork belly topped with green onions, served with Japanese mustard",
       picture: ""
     },
     {
       name: "*Tuna Poke",
       price: 8.25,
-      description: "Sweet sesame soy sauce marinated tuna with avocado, sea weed salad, onion, and cilantro",
+    description: "Sweet sesame soy sauce marinated tuna with avocado, seaweed salad, onion, and cilantro",
       picture: ""
     },
     {
       name: "*Salmon Poke",
       price: 8.25,
-      description: "Sweet sesame soy sauce marinated salmon with avocado, sea weed salad, onion, and cilantro",
+    description: "Sweet sesame soy sauce marinated salmon with avocado, seaweed salad, onion, and cilantro",
       picture: ""
     },
     {
@@ -44,19 +38,19 @@ export const appetizers = [
     {
       name: "Kaki Fry",
       price: 8.5,
-      description: "Deep fried oyster with tonkatsu sauce",
+    description: "Deep fried oysters served with tonkatsu sauce",
       picture: ""
     },
     {
       name: "Octopus Dumpling (5pc)",
-      price: 5,
+    price: 5.5,
       description: "Takoyaki topped with takoyaki sauce, mayo, seaweed flakes, and bonito flakes",
       picture: ""
     },
     {
       name: "Fried Calamari",
       price: 6.75,
-      description: "Deep fried calamari with Kigaru tar-tar sauce",
+    description: "Deep fried calamari served with Kigaru tar-tar sauce",
       picture: ""
     },
     {
@@ -79,7 +73,7 @@ export const appetizers = [
     },
     {
       name: "Fried Eggplant Tofu",
-      price: 7.75,
+    price: 8,
       description: "Deep fried eggplant and tofu in bonito broth with green onion and bonito flake on top",
       picture: ""
     },
