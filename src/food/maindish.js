@@ -60,31 +60,31 @@ export const noodles = [
     },
     {
       name: "*Tonkotsu Ramen",
-      price: 11,
-      description: "Pork broth, topped with egg, sliced pork, bamboo shoots, green onion, seaweed",
+    price: 11.5,
+    description: "Pork broth, topped with egg, sliced pork, bamboo shoots, green onion, seaweed, and ginger",
     picture: tonkotsuramen,
     },
     {
       name: "*Tonkotsu Shoyu Ramen",
-      price: 11,
-      description: "Soy sauce pork broth, topped with egg, sliced pork, bamboo shoots, green onion, seaweed",
+    price: 11.5,
+    description: "Soy sauce pork broth, topped with egg, sliced pork, bamboo shoots, green onion, seaweed, and ginger",
       picture: ""
     },
     {
       name: "*Miso Ramen",
-      price: 11,
-      description: "Miso broth, topped with sliced pork, green onion, egg, bamboo shoots, and corn",
+    price: 11.5,
+    description: "Miso broth, topped with sliced pork, green onion, egg, bamboo shoots, seaweed, and corn",
       picture: ""
     },
     {
       name: "*Spicy Miso Ramen",
-      price: 11,
+    price: 11.5,
       description: "Just like the Miso Ramen, but with a spicy kick",
       picture: ""
     },
     {
       name: "*Kakuni Ramen",
-      price: 12,
+    price: 12.5,
       description: "Topped with egg, kakuni pork belly, bamboo shoots, green onion, seaweed. Your choice of broth: Tonkotsu, Tonkotsu Shoyu, Miso, or Spicy Miso",
       picture: ""
     }
