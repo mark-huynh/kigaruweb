@@ -14,12 +14,6 @@ export const nigiri = [
     picture: ""
   },
   {
-    name: "*Tuna",
-    price: 2.5,
-    description: "",
-    picture: ""
-  },
-  {
     name: "*Salmon",
     price: 2.5,
     description: "",

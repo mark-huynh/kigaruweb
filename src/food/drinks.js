@@ -36,7 +36,7 @@ export const chuHi = [
     name: "Calpico Hi",
     price: 8.5,
     description: "Pint Glass",
-    picture: img_20181212_202437,
+    picture: "",
   },
   {
     name: "Lemon Hi",
