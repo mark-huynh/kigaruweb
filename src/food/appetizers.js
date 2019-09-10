@@ -11,7 +11,7 @@ export const appetizers = [
       picture: ""
     },
     {
-      name: "Kigaru French Fries",
+      name: "Kigaru Frnch Fries",
       price: 3.75,
       description: "Spiral cut potato and french fries with okonomiyaki sauce & mayo on top",
       picture: ""
