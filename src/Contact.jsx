@@ -43,21 +43,21 @@ class Drinks extends React.Component {
               </div>
             </Paper>
             <Paper elevation={3} style={{margin: '20px'}}>
-              <a href="tel:123-123-1234">
+              <a href="tel:971-371-3134">
                 <li>
                   <img src={phone} alt="phone"/>
                   <p>
-                      Call Us @123-123-1234
+                      Call Us @971-371-3134
                   </p>
                 </li>
               </a>
             </Paper>
             <Paper elevation={3} style={{margin: '20px'}}>
-              <a href="mailto:test@gmail.com">
+              <a href="mailto:kigarusushi@gmail.com">
                 <li>
                   <img src={envelope} alt="envelope"/>
                   <p>
-                      Email Us test@gmail.com
+                      Email Us kigarusushi@gmail.com
                   </p>
                 </li>
               </a>
