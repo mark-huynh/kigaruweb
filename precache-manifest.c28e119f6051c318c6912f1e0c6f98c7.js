@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/kigaru-sushi.com/static/media/noodle.c005cbdf.svg"
   },
   {
-    "revision": "c00b16b224264f05933d",
+    "revision": "6f02dcb19817a3de56ed",
     "url": "/kigaru-sushi.com/static/css/main.b928f5bb.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/kigaru-sushi.com/static/js/runtime~main.fe94b5eb.js"
   },
   {
-    "revision": "fee6cadae58f935d1fe0",
-    "url": "/kigaru-sushi.com/static/js/2.212b2be1.chunk.js"
+    "revision": "4f4d2ccd7be4b29ab6a3",
+    "url": "/kigaru-sushi.com/static/js/2.63970e80.chunk.js"
   },
   {
     "revision": "91e69747872c1ffa8418cb3777430fb7",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/kigaru-sushi.com/static/media/home.133ce3f8.svg"
   },
   {
-    "revision": "c00b16b224264f05933d",
-    "url": "/kigaru-sushi.com/static/js/main.ef3be58c.chunk.js"
+    "revision": "6f02dcb19817a3de56ed",
+    "url": "/kigaru-sushi.com/static/js/main.f49280a9.chunk.js"
   },
   {
     "revision": "b3f066f2bbcb460e0c736c4256a98860",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/kigaru-sushi.com/static/media/img_20181212_202437.3aa651bd.jpg"
   },
   {
-    "revision": "049aeda7d0440428d9d2fc5b26b035c1",
+    "revision": "f5ff62dcc262c06a367d503a45b068a1",
     "url": "/kigaru-sushi.com/index.html"
   }
 ];
