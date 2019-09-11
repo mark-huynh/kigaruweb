@@ -4,7 +4,7 @@ import Sushi from "./Sushi";
 import Appetizers from "./Appetizers";
 import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, BrowserRouter } from "react-router-dom";
 import Mobilenav from "./Mobilenav";
 import Maindish from "./Maindish";
 import Drinks from "./Drinks";
@@ -59,84 +59,87 @@ class App extends React.Component {
 
   render() {
     return (
-      <HashRouter basename="/">
-        <div>
-          {this.state.isDesktop ? <Navbar /> : <Mobilenav openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
-          <Route exact path="/" render={ () => (<Home
-            handleListClick={() => this.setState({openDrawer: true})}
-          />)} />
-          <Route
-            path="/sushi"
-            component={() => (
-              <Sushi
-                nigiri={sushi.nigiri}
-                gunkan={sushi.gunkan}
-                makirolls={sushi.makirolls}
-                desktop={this.state.isDesktop}
-              />
-            )}
-          />
-          <Route
-            path="/appetizers"
-            render={() => <Appetizers appetizers={appetizers} />}
-          />
-          <Route
-            path="/maindish"
-            render={() => (
-              <Maindish
-                japaneseCurry={maindish.japaneseCurry}
-                noodles={maindish.noodles}
-                donburi={maindish.donburi}
-              />
-            )}
-          />
-          <Route
-            path="/drinks"
-            render={() => (
-              <Drinks
-                beer={drinks.beer}
-                chuHi={drinks.chuHi}
-                softDrinks={drinks.softDrinks}
-                dessert={drinks.dessert}
-              />
-            )}
-          />
-          <Route
-            path="/contact"
-            render={() => (
-              <Contact
-              />
-            )}
-          />
-          <Pop pose={this.state.showDialog ? "static" : "grow"}>
-            <Fab
-              onClick={this.handleClickButton}
-              style={{
-                position: "fixed",
-                bottom: "0",
-                right: "0",
-                zIndex: 2,
-                marginRight: "5px",
-                marginBottom: "10px"
-              }}
-              size={this.state.isDesktop ? "large" : "small"}
-            >
-              <Icon
-                style={
-                  this.state.isDesktop
-                    ? { fontSize: "40px" }
-                    : { fontSize: "30px" }
-                }
-                color={"error"}
-              >
-                favorite_border
-              </Icon>
-            </Fab>
-          </Pop>
-          <Shopping open={this.state.showDialog} close={this.handleClose} />
-          <Footer />
-        </div>
-      </HashRouter>
+      <div>
+        Hello
+      </div>
+      // <BrowserRouter>
+      //   <div>
+      //     {this.state.isDesktop ? <Navbar /> : <Mobilenav openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
+      //     <Route exact path={process.env.PUBLIC_URL + '/'} render={ () => (<Home
+      //       handleListClick={() => this.setState({openDrawer: true})}
+      //     />)} />
+      //     <Route
+      //       path="/sushi"
+      //       component={() => (
+      //         <Sushi
+      //           nigiri={sushi.nigiri}
+      //           gunkan={sushi.gunkan}
+      //           makirolls={sushi.makirolls}
+      //           desktop={this.state.isDesktop}
+      //         />
+      //       )}
+      //     />
+      //     <Route
+      //       path="/appetizers"
+      //       render={() => <Appetizers appetizers={appetizers} />}
+      //     />
+      //     <Route
+      //       path="/maindish"
+      //       render={() => (
+      //         <Maindish
+      //           japaneseCurry={maindish.japaneseCurry}
+      //           noodles={maindish.noodles}
+      //           donburi={maindish.donburi}
+      //         />
+      //       )}
+      //     />
+      //     <Route
+      //       path="/drinks"
+      //       render={() => (
+      //         <Drinks
+      //           beer={drinks.beer}
+      //           chuHi={drinks.chuHi}
+      //           softDrinks={drinks.softDrinks}
+      //           dessert={drinks.dessert}
+      //         />
+      //       )}
+      //     />
+      //     <Route
+      //       path="/contact"
+      //       render={() => (
+      //         <Contact
+      //         />
+      //       )}
+      //     />
+      //     <Pop pose={this.state.showDialog ? "static" : "grow"}>
+      //       <Fab
+      //         onClick={this.handleClickButton}
+      //         style={{
+      //           position: "fixed",
+      //           bottom: "0",
+      //           right: "0",
+      //           zIndex: 2,
+      //           marginRight: "5px",
+      //           marginBottom: "10px"
+      //         }}
+      //         size={this.state.isDesktop ? "large" : "small"}
+      //       >
+      //         <Icon
+      //           style={
+      //             this.state.isDesktop
+      //               ? { fontSize: "40px" }
+      //               : { fontSize: "30px" }
+      //           }
+      //           color={"error"}
+      //         >
+      //           favorite_border
+      //         </Icon>
+      //       </Fab>
+      //     </Pop>
+      //     <Shopping open={this.state.showDialog} close={this.handleClose} />
+      //     <Footer />
+      //   </div>
+      // </BrowserRouter>
     );
   }
 }
