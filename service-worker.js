@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/kigaru-sushi.com/precache-manifest.0e5add37223ff47bfef40cc58ee851b0.js"
+  "/kigaru-sushi.com/precache-manifest.624143e74b79fdffc2c99d8b8ec90d7e.js"
 );
 
 workbox.clientsClaim();
