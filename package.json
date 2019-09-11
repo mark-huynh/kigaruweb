@@ -2,7 +2,7 @@
   "name": "kigaru-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mark-huynh.github.io/kigaruweb/",
+  "homepage": "https:/kigaru-sushi.com",
   "dependencies": {
     "@material-ui/core": "^4.3.0",
     "@material-ui/styles": "^4.3.0",
