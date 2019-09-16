@@ -252,9 +252,6 @@ a{
   padding-right: 20px;
 }
 
-*{
-  touch-action: none;
-}
 
 .contact-form{
   font-family: Montserrat;

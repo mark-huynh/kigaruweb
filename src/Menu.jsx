@@ -41,7 +41,7 @@ class Menu extends React.Component {
           spacing={5}
         >
           {menuBlocks.map(menuBlock => (
-            <Grid item xs={6}>
+            <Grid item lg={6}>
               {React.createElement(
                 "ul",
                 null,
