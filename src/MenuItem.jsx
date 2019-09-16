@@ -61,7 +61,7 @@ class MenuItem extends Component {
 
   render() {
     return (
-      <li style={{maxWidth: '650px'}}
+      <li style={{maxWidth: '700px'}}
         onClick={() => this.handleBoxClick()}
       >
         {this.props.item.picture !== undefined &&

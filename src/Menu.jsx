@@ -36,12 +36,12 @@ class Menu extends React.Component {
         <Grid
           container
           direction="row"
-          justify="space-between"
+          justify="space-evenly"
           alignItems="center"
-          spacing={4}
+          spacing={5}
         >
           {menuBlocks.map(menuBlock => (
-            <Grid item>
+            <Grid item xs={12}>
               {React.createElement(
                 "ul",
                 null,

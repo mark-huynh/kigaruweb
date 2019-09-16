@@ -206,7 +206,7 @@ body{
 }
 
 .MuiGrid-root .MuiGrid-item{
-  margin: auto;
+  /* margin: auto; */
 }
 
 a{
@@ -299,4 +299,8 @@ a{
 
 .description{
   font-style: italic;
+}
+
+.menu ul li{
+  margin: auto;
 }

@@ -82,8 +82,9 @@ class Home extends React.Component {
             style={{ cursor: "pointer" }}
             onClick={this.handleMap}
           >
-            <li>Monday - Saturday: 5PM - 11PM</li>
-            <li>Sunday : Closed</li>
+            <li><b>Tuesday - Saturday:</b> 5PM - 11PM</li>
+            <li><b>Sunday</b>: 5PM - 10PM</li>
+            <li><b>Monday</b>: Closed</li>
             <br />
             <li> 3486 SW Cedar Hills Blvd, Beaverton, OR 97005</li>
           </ul>
