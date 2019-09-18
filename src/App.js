@@ -62,7 +62,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           {this.state.isDesktop ? <Navbar /> : <Mobilenav openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
-          <Route exact path={process.env.PUBLIC_URL + '/'} render={ () => (<Home
+          <Route exact path='/' render={ () => (<Home
             handleListClick={() => this.setState({openDrawer: true})}
           />)} />
           <Route
