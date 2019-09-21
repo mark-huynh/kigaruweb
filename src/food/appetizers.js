@@ -1,3 +1,9 @@
+import Garlic_Edamame from '../pictures/food/Garlic_Edamame.JPG'
+import Karage from '../pictures/food/Karage.JPG'
+import butter from '../pictures/food/butter.JPG'
+import fries from '../pictures/food/fries.JPG'
+
+
 export const appetizers = [
     {
       name: "Garlic Butter Scallops (3pc)",
@@ -8,13 +14,13 @@ export const appetizers = [
       name: "Garlic Edamame",
       price: 3.75,
       description: "Edamame sautéed with butter and garlic",
-      picture: ""
+      picture: Garlic_Edamame
     },
     {
       name: "Kigaru French Fries",
       price: 3.75,
       description: "Spiral cut potato and french fries with okonomiyaki sauce & mayo on top",
-      picture: ""
+      picture: fries
     },
     {
       name: "Pork Belly Kakuni",
@@ -62,7 +68,7 @@ export const appetizers = [
       name: "Karaage (5pc)",
       price: 6.5,
       description: "Japanese style fried chicken served with mayo",
-      picture: ""
+      picture: Karage
     },
     {
       name: "Fried Tofu",
@@ -92,7 +98,7 @@ export const appetizers = [
       name: "Garlic Butter Mussels (5pc)",
       price: 7.75,
       description: "Mussels with garlic and butter topped with basil",
-      picture: ""
+      picture: butter
     },
     {
       name: "Vegetable Gyoza (5pc)",

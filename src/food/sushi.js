@@ -1,4 +1,60 @@
-//DO NOT FORMAT: Descriptions that are too long get cut
+import veggie from '../pictures/food/veggie.JPG'
+import raijin from '../pictures/food/raijin.JPG'
+import lobster from '../pictures/food/lobster.JPG'
+import salmonlove from '../pictures/food/salmonlove.JPG'
+import vegas from '../pictures/food/vegas.JPG'
+import Negitoro from '../pictures/food/Negitoro.JPG'
+
+export const specials = [
+  {
+    name: "Bluefin Tuna (1pc)",
+    price: 3,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Bluefin Tuna Toro (1pc)",
+    price: 4.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Negitoro (2pc)",
+    price: 3,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (5pc)",
+    price: 11,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (7pc)",
+    price: 14,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (10pc)",
+    price: 19,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Assorted Sashimi (3 kinds)",
+    price: 7.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Assorted Sashimi (5 kinds)",
+    price: 14,
+    description: "",
+    picture: ""
+  },
+]
 
 export const nigiri = [
   {
@@ -164,7 +220,7 @@ export const makirolls = [
     name: "Vegetable Roll",
     price: 5.75,
     description: "Avocado, cucumber, radish sprouts, pickled radish, burdock root, inari",
-    picture: ""
+    picture: veggie
   },
   {
     name: "Giant Veggie Roll",
@@ -182,7 +238,7 @@ export const makirolls = [
     name: "Lobster Crab Roll",
     price: 16.75,
     description: "Lobster & real crab salad, avocado. Deep fried and topped with sesame seeds. Served with yakitori sauce for dipping",
-    picture: ""
+    picture: lobster
   },
   {
     name: "*Rainbow Roll",
@@ -242,13 +298,13 @@ export const makirolls = [
     name: "*Vegas Roll",
     price: 14,
     description: "Smoked salmon, crab salad, cream cheese, avocado. Deep fried and topped with eel sauce and smelt roe",
-    picture: ""
+    picture: vegas
   },
   {
     name: "*Salmon Lover Roll",
     price: 13.75,
     description: "Tempura salmon, avocado, topped with salmon, tobiko, & lemon",
-    picture: ""
+    picture: salmonlove
   },
   {
     name: "Shrimp Lover Roll",
@@ -281,7 +337,7 @@ export const makirolls = [
     name: "*Raijin Roll",
     price: 16,
     description: "California roll topped with spicy baked scallops and real crab",
-    picture: ""
+    picture: raijin
   },
   {
     name: "*Fujin Roll",

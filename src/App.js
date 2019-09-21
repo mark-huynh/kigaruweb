@@ -69,6 +69,7 @@ class App extends React.Component {
             path="/sushi"
             component={() => (
               <Sushi
+                specials={sushi.specials}
                 nigiri={sushi.nigiri}
                 gunkan={sushi.gunkan}
                 makirolls={sushi.makirolls}
