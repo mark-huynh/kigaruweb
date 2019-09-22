@@ -98,7 +98,7 @@ class MenuItem extends Component {
             this.setState({ showImage: false });
           }}
         >
-          <img style={{width: '65vw'}} src={this.props.item.picture} alt={this.props.name}/>
+          <img style={{width: '75vw'}} src={this.props.item.picture} alt={this.props.name}/>
         </Dialog>
       </li>
     );
