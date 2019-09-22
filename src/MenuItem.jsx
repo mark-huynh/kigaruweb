@@ -66,25 +66,29 @@ class MenuItem extends Component {
       >
         {this.props.item.picture !== undefined &&
           this.props.item.picture !== "" && (
-            <Icon style={{marginRight: '7px', fontSize: '20px', verticalAlign: 'bottom'}} onClick={() => this.setState({ showImage: true })}>
-              crop_original
-            </Icon>
+            <div onClick={() => this.setState({ showImage: true })}>
+              <Icon style={{marginRight: '7px', fontSize: '30px', verticalAlign: 'bottom'}}>
+                crop_original
+              </Icon>
+            </div>
           )}
         <div className="item-title">
           {this.props.item.name} {this.props.item.price}
         </div>{" "}
         {this.state.showHeart && (
-          <Icon
-            style={{ fontSize: "medium", paddingLeft: "7px" }}
-            color={this.state.activeHeart ? "error" : "disabled"}
-            onClick={
-              this.state.activeHeart
-                ? () => this.handleClickRemove(this.props.item)
-                : () => this.handleClickAdd(this.props.item)
-            }
-          >
-            favorite
-          </Icon>
+          <div onClick={
+            this.state.activeHeart
+              ? () => this.handleClickRemove(this.props.item)
+              : () => this.handleClickAdd(this.props.item)
+          }>
+            <Icon
+              style={{ fontSize: "20px", paddingLeft: "7px" }}
+              color={this.state.activeHeart ? "error" : "disabled"}
+              
+            >
+              favorite
+            </Icon>
+          </div>
         )}
         <p className="description">{this.props.item.description}</p>
         <Dialog
