@@ -17,16 +17,16 @@ class Sushi extends React.Component {
 
         <MenuContainer>
           <Menu
-            title="Specials"
-            items={[...this.props.specials]}
-          />
-          <Menu
             title="Nigiri (1pc)"
             items={[...this.props.nigiri]}
           />
           <Menu
             title="Gunkan (2pc)"
             items={[...this.props.gunkan]}
+          />
+          <Menu
+            title="Specials"
+            items={[...this.props.specials]}
           />
           <Menu
             title="Maki / Rolls"

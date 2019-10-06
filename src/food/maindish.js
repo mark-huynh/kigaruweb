@@ -35,11 +35,6 @@ export const japaneseCurry = [
 
 export const noodles = [
     {
-      name: "Garlic Tonkotsu Ramen",
-    price: 12.5,
-      description: "Same as Tonkotsu ramen but with black garlic oil"
-    },
-    {
       name: "Kimchi Udon",
     price: 9.5,
     description: "Bonito broth with kimchi, spicy cod roe, green onion, and seaweed",
@@ -62,6 +57,11 @@ export const noodles = [
     price: 9.75,
     description: "Bonito broth with braised pork belly, seaweed, onion, and green onion",
       picture: ""
+    },
+    {
+      name: "Garlic Tonkotsu Ramen",
+    price: 12.5,
+      description: "Black garlic pork broth topped with egg, sliced pork, bamboo shoots, green onion, wood ear mushroom, garlic paste and ginger"
     },
     {
       name: "*Tonkotsu Ramen",
@@ -90,7 +90,7 @@ export const noodles = [
     {
       name: "*Kakuni Ramen",
     price: 12.5,
-      description: "Topped with egg, kakuni pork belly, bamboo shoots, green onion, seaweed. Your choice of broth: Tonkotsu, Tonkotsu Shoyu, Miso, or Spicy Miso",
+      description: "Kakuni pork belly instead of sliced pork. Your choice of broth: Tonkotsu, Tonkotsu Shoyu, Miso, or Spicy Miso",
       picture: ""
     }
   ];
@@ -121,9 +121,9 @@ export const noodles = [
       picture: ""
     },
     {
-      name: "Karaage Don",
+      name: "Karage Don",
       price: 9.5,
-      description: "Rice bowl topped with Japanese style fried chicken dipped in yakitori sauce, green onion, sesame seed, seaweed, and yakitori sauce",
+      description: "Rice bowl topped with Japanese style fried chicken dipped in yakitori sauce, green onion, sesame seed, and seaweed",
       picture: ""
     }
   ];

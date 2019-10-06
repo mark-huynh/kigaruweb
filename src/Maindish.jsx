@@ -19,7 +19,7 @@ class Maindish extends React.Component {
             )}
             <MenuContainer>
               <Menu
-                title="Japanese Curry"
+                title="Japanese Beef Curry"
                 items={[...this.props.japaneseCurry]}
               />
               <Menu

@@ -92,7 +92,7 @@ export const dessert = [
       description: "(Green Tea or Coconut)"
     },
     {
-      name: "Homemade Roll Cake",
+      name: "Mochi Cake (3pc)",
     price: 4.5,
       description: ""
     },
@@ -111,7 +111,7 @@ export const dessert = [
   {
     name: "Taiyaki Ice Cream",
     price: 5.5,
-    description: "(Ice Cream Flavors: Red bean, Green Tea, Vanilla or Coconut)",
+    description: "(Ice Cream Flavors: Green Tea, Vanilla or Coconut)",
     picture: ""
   }
 ];

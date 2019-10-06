@@ -5,57 +5,6 @@ import salmonlove from '../pictures/food/salmonlove.JPG'
 import vegas from '../pictures/food/vegas.JPG'
 import Negitoro from '../pictures/food/Negitoro.JPG'
 
-export const specials = [
-  {
-    name: "Bluefin Tuna (1pc)",
-    price: 3,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Bluefin Tuna Toro (1pc)",
-    price: 4.5,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Negitoro (2pc)",
-    price: 3,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Omakase (5pc)",
-    price: 11,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Omakase (7pc)",
-    price: 14,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Omakase (10pc)",
-    price: 19,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Assorted Sashimi (3 kinds)",
-    price: 7.5,
-    description: "",
-    picture: ""
-  },
-  {
-    name: "Assorted Sashimi (5 kinds)",
-    price: 14,
-    description: "",
-    picture: ""
-  },
-]
-
 export const nigiri = [
   {
     name: "*Squid",
@@ -82,6 +31,12 @@ export const nigiri = [
     picture: ""
   },
   {
+    name: "*Bluefin Tuna",
+    price: 3,
+    description: "",
+    picture: ""
+  },
+  {
     name: "*Mackerel",
     price: 2,
     description: "",
@@ -100,7 +55,7 @@ export const nigiri = [
     picture: ""
   },
   {
-    name: "*Aji",
+    name: "*Horse Mackerel",
     price: 3,
     description: "",
     picture: ""
@@ -120,6 +75,12 @@ export const nigiri = [
   {
     name: "*Yellowtail",
     price: 2.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "*Yellowtail Toro",
+    price: 3,
     description: "",
     picture: ""
   },
@@ -167,6 +128,63 @@ export const nigiri = [
   }
 ];
 
+export const specials = [
+  {
+    name: "Bluefin Tuna Toro (1pc)",
+    price: 4.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Negitoro (2pc)",
+    price: 5.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (5pc)",
+    price: 11,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (7pc)",
+    price: 14,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Omakase (10pc)",
+    price: 19,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "*Uni (1pc)",
+    price: 3.75,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Assorted Sashimi (3 kinds)",
+    price: 7.5,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Assorted Sashimi (5 kinds)",
+    price: 14,
+    description: "",
+    picture: ""
+  },
+  {
+    name: "Assorted Sashimi (7 kinds)",
+    price: 20,
+    description: "",
+    picture: ""
+  },
+]
+
 export const makirolls = [
   {
     name: "Cucumber Roll (6pc)",
@@ -213,7 +231,7 @@ export const makirolls = [
   {
     name: "*Kigaru Roll",
     price: 16.75,
-    description: "Tuna, albacore, avocado, cucumber, topped with seared salmon, jalapeno, smelt roe, & Kigaru sauce",
+    description: "Tuna, albacore, avocado, cucumber, topped with seared salmon, jalapeño, smelt roe, & Kigaru sauce",
     picture: ""
   },
   {
@@ -237,7 +255,7 @@ export const makirolls = [
   {
     name: "Lobster Crab Roll",
     price: 16.75,
-    description: "Lobster & real crab salad, avocado. Deep fried and topped with sesame seeds. Served with yakitori sauce for dipping",
+    description: "Lobster salad, real crab, and avocado. Deep fried and topped with sesame seeds. Served with yakitori sauce for dipping",
     picture: lobster
   },
   {
@@ -261,7 +279,7 @@ export const makirolls = [
   {
     name: "*Salmon Skin Roll",
     price: 6.5,
-    description: "Salmon skin, avocado, burdock root, cucumber, and cream cheese",
+    description: "Salmon skin, avocado, burdock root, and cream cheese",
     picture: ""
   },
   {
@@ -285,7 +303,7 @@ export const makirolls = [
   {
     name: "*California Roll",
     price: 5,
-    description: "Krab, avocado, cucumber, smelt roe",
+    description: "Krab, avocado, cucumber topped with smelt roe",
     picture: ""
   },
   {
@@ -324,7 +342,7 @@ export const makirolls = [
     name: "*Spider Roll (5pc)",
     price: 10,
     description:
-      "Soft shell crab, avocado, cucumber, smelt roe, sesame seeds, radish sprouts",
+      "Soft shell crab, avocado, burdock root, smelt roe, sesame seeds, radish sprouts",
       picture: ""
   },
   {
@@ -342,7 +360,7 @@ export const makirolls = [
   {
     name: "*Fujin Roll",
     price: 16.5,
-    description: "Spicy tuna, avocado, cucumber, krab, topped with seared albacore, sesame seeds, jalapeno, & Kigaru sauce",
+    description: "Spicy tuna, avocado, cucumber, krab, topped with seared albacore, sesame seeds, jalapeño, & Kigaru sauce",
     picture: ""
   },
   {
@@ -408,10 +426,4 @@ export const gunkan = [
     description: "",
     picture: ""
   },
-  {
-    name: "*Uni (1pc)",
-    price: 3.75,
-    description: "",
-    picture: ""
-  }
 ];
