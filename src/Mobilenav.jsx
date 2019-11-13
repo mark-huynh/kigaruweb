@@ -6,12 +6,12 @@ import { List } from '@material-ui/core';
 import { ListItemIcon } from '@material-ui/core';
 import { IconButton } from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
-import skewer from './pictures/appetizer.svg';
-import beer from './pictures/beer.svg';
-import home from './pictures/home.svg';
-import noodle from './pictures/noodle.svg';
-import sending from './pictures/sending.svg';
-import sushi from './pictures/sushi.svg';
+import skewer from './pictures/icons/appetizer.svg';
+import beer from './pictures/icons/beer.svg';
+import home from './pictures/icons/home.svg';
+import noodle from './pictures/icons/noodle.svg';
+import sending from './pictures/icons/sending.svg';
+import sushi from './pictures/icons/sushi.svg';
 import { makeStyles } from '@material-ui/styles';
 import { NavLink } from 'react-router-dom';
 

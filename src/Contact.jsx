@@ -1,8 +1,8 @@
 import React from "react";
 import wall from "./pictures/backgrounds/wall2.jpg";
-import location from './pictures/location.svg';
-import phone from './pictures/phone.svg';
-import envelope from './pictures/envelope.svg';
+import location from './pictures/icons/location.svg';
+import phone from './pictures/icons/phone.svg';
+import envelope from './pictures/icons/envelope.svg';
 import Paper from '@material-ui/core/Paper';
 
 class Drinks extends React.Component {
