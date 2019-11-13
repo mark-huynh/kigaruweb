@@ -1,5 +1,6 @@
 import React from "react";
 import posed from "react-pose";
+import wall from './pictures/Logo_7404-page-001.jpg';
 
 const Description = posed.ul({
   open: {
@@ -75,7 +76,8 @@ class Home extends React.Component {
           <img
             alt="kigaru logo"
             className="kigaru-image"
-            src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"
+            // src="https://cdn.doordash.com/media/restaurant/cover/KigaruSushi3486BeavertonOR.png"
+            src={wall}
           />
           <ul
             className="hours"
