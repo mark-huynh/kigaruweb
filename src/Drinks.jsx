@@ -1,7 +1,8 @@
 import React from "react";
 import Menu from "./Menu.jsx";
 import MenuContainer from "./MenuContainer";
-import wall from "./pictures/backgrounds/wall2.jpg";
+// import wall from "./pictures/backgrounds/wall2.jpg";
+import wall from './pictures/backgrounds/IMG_3936.JPG'
 
 class Drinks extends React.Component {
   style = {

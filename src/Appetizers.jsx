@@ -1,7 +1,10 @@
 import React from 'react';
 import Menu from './Menu.jsx'
 import MenuContainer from './MenuContainer'
-import wall from './pictures/backgrounds/wall2.jpg'
+// import wall from './pictures/backgrounds/IMG_3929.JPG'
+import wall from "./pictures/backgrounds/IMG_3932.JPG";
+
+// import wall from './pictures/backgrounds/wall2.jpg'
 
 class Appetizer extends React.Component {
 

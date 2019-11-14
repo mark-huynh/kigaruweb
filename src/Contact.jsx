@@ -1,5 +1,9 @@
 import React from "react";
-import wall from "./pictures/backgrounds/wall2.jpg";
+import wall from "./pictures/backgrounds/IMG_3932.JPG";
+// import wall from "./pictures/backgrounds/wall2.jpg";
+// import wall from './pictures/backgrounds/IMG_3929.JPG'
+
+// src\pictures\backgrounds\IMG_3932.JPG
 import location from './pictures/icons/location.svg';
 import phone from './pictures/icons/phone.svg';
 import envelope from './pictures/icons/envelope.svg';

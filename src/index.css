@@ -14,7 +14,7 @@ body{
 .imghrs{
   height: 100vh;
   width: 100vw; 
-  background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2017/05/Izakaya-1-1024x683.jpg");
+  background-image: url("./pictures/backgrounds/IMG_3934.JPG");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +110,7 @@ body{
 }
 
 .navwrap{
-  background-color: #B22222;
+  background-color: rgba(153, 28, 28, 0.931);
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;

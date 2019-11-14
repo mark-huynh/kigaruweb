@@ -1,7 +1,9 @@
 import React from 'react';
 import Menu from './Menu.jsx'
 import MenuContainer from './MenuContainer'
-import wall from './pictures/backgrounds/wall2.jpg'
+// import wall from './pictures/backgrounds/wall2.jpg'
+import wall from './pictures/backgrounds/IMG_3929.JPG'
+
 
 //TODO: Add skewers, chef specials, and side dishes (rice, miso, etc)
 class Maindish extends React.Component {

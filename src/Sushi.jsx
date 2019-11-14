@@ -1,8 +1,9 @@
 import React from "react";
 import Menu from "./Menu.jsx";
 import MenuContainer from "./MenuContainer";
-import wall from "./pictures/backgrounds/wall1.jpg";
-
+// import wall from "./pictures/backgrounds/wall1.jpg";
+import wall from "./pictures/backgrounds/IMG_3928.JPG";
+// C:\Users\Mark Huynh\Desktop\Dev\kigaruweb\src\pictures\backgrounds\IMG_3928.JPG
 class Sushi extends React.Component {
   style = {
     backgroundImage: `url(${wall})`
