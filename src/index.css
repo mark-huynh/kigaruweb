@@ -19,8 +19,8 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   animation-name: blurring;
-  animation-duration: .5s;
-  animation-delay: .5s;
+  animation-duration: .25s;
+  animation-delay: 1.75s;
   animation-fill-mode: forwards;
 }
 
