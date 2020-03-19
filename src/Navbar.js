@@ -30,6 +30,9 @@ return(
   </li>
 
 </ul>
+<div style={{color: 'white', fontSize: '20px', fontFamily: 'Lato', padding: '10px'}}>
+  <b>Due to governor Kate Brown's order we will be limiting all orders to take-out only during the business hours below. Thank you for understanding. </b>
+</div>
 </div>
 
 );

@@ -72,6 +72,9 @@ class Home extends React.Component {
             </Description>
           </div>
         </div>
+        <div style={{fontSize: '3vw', fontFamily: 'Lato', padding: '10px'}}>
+  <b>Due to governor Kate Brown's order we will be limiting all orders to take-out only during the business hours below. Thank you for understanding. </b>
+</div>
         <div className="info-wrap">
           <img
             alt="kigaru logo"
@@ -84,8 +87,11 @@ class Home extends React.Component {
             style={{ cursor: "pointer" }}
             onClick={this.handleMap}
           >
-            <li><b>Tuesday - Saturday:</b> 5PM - 11PM</li>
-            <li><b>Sunday</b>: 5PM - 10PM</li>
+            <li><b>Tuesday - Friday:</b> 5PM - 11PM</li>
+            <li><b>Saturday</b>: 11:30AM - 2:30PM</li>
+            <li>& 5PM - 11PM</li>
+            <li><b>Sunday:</b>11:30AM - 2:30PM </li>
+            <li>& 5PM - 10PM</li>
             <li><b>Monday</b>: Closed</li>
             <br />
             <li> 3486 SW Cedar Hills Blvd, Beaverton, OR 97005</li>
