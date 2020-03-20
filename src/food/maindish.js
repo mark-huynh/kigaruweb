@@ -1,5 +1,15 @@
 import tonkotsuramen from '../pictures/food/tonkotsuramen.jpg'
 import chirashidon from '../pictures/food/chirashidon.jpg'
+import bento from '../pictures/food/bentobox.jpg'
+
+export const combos = [
+  {
+    name: "Bento Box",
+    price: "8 (or 8.50 with Miso Soup)",
+    description: "Includes: Salmon Skin Roll, Karage (3pc), Edamame, Sesame Balls",
+    picture: bento
+  }
+];
 export const japaneseCurry = [
          {
            name: "Beef Curry",

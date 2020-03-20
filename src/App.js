@@ -88,6 +88,7 @@ class App extends React.Component {
                 japaneseCurry={maindish.japaneseCurry}
                 noodles={maindish.noodles}
                 donburi={maindish.donburi}
+                combos={maindish.combos}
               />
             )}
           />

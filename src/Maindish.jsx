@@ -5,7 +5,6 @@ import MenuContainer from './MenuContainer'
 import wall from './pictures/backgrounds/IMG_3929.JPG'
 
 
-//TODO: Add skewers, chef specials, and side dishes (rice, miso, etc)
 class Maindish extends React.Component {
 
     style={
@@ -21,6 +20,10 @@ class Maindish extends React.Component {
             )}
             <MenuContainer>
               <Menu
+                title="Combos"
+                items={[...this.props.combos]}
+              />
+              <Menu
                 title="Japanese Beef Curry"
                 items={[...this.props.japaneseCurry]}
               />
@@ -34,34 +37,6 @@ class Maindish extends React.Component {
               />
             </MenuContainer>
           </div>
-
-          /*
-          {
-            name: "ItemName",
-            price: 10.5,
-            description:
-          },
-          {
-            name: "ItemName",
-            price: 10.5,
-            description:
-          },
-          {
-            name: "ItemName",
-            price: 10.5,
-            description:
-          },
-          {
-            name: "ItemName",
-            price: 10.5,
-            description:
-          },
-          {
-            name: "ItemName",
-            price: 10.5,
-            description:
-          },
-          */
         );
     }
 }
