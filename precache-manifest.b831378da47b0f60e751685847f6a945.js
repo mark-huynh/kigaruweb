@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/envelope.4d9e5a20.svg"
   },
   {
-    "revision": "3dade0b4505542d62b9c",
-    "url": "/static/css/main.af5e4f88.chunk.css"
+    "revision": "62fa60ecd72970aee837",
+    "url": "/static/css/main.8cc37c99.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "5a3c4627384a6d9adb1e",
-    "url": "/static/js/2.cc8c162c.chunk.js"
+    "revision": "292c7b329042ad3dbbc3",
+    "url": "/static/js/2.844e90d3.chunk.js"
   },
   {
     "revision": "2cd44cba7973dca7fc6eed88f7a8a099",
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/static/media/phone.8b2f97f7.svg"
   },
   {
-    "revision": "3dade0b4505542d62b9c",
-    "url": "/static/js/main.69154834.chunk.js"
+    "revision": "62fa60ecd72970aee837",
+    "url": "/static/js/main.edc341af.chunk.js"
   },
   {
     "revision": "1cd6d349612ed8c998d9c99cdf68e11f",
@@ -94,6 +94,10 @@ self.__precacheManifest = [
   {
     "revision": "280ec53aee1c117f198e6684ac879957",
     "url": "/static/media/chirashidon.280ec53a.jpg"
+  },
+  {
+    "revision": "94f34f849ffc5ff21a086f39b61dd4db",
+    "url": "/static/media/bentobox.94f34f84.jpg"
   },
   {
     "revision": "396379848eacd35e0ddd1a5c8bd7145f",
@@ -132,7 +136,7 @@ self.__precacheManifest = [
     "url": "/static/media/Negitoro.8fb53a51.JPG"
   },
   {
-    "revision": "59df3664875e9a1c51a5d0a31ae6b83c",
+    "revision": "029293fe692303e6ee04627075521c1d",
     "url": "/index.html"
   }
 ];
