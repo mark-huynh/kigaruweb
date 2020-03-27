@@ -114,6 +114,10 @@ class App extends React.Component {
               />
             )}
           />
+          <Route
+            path="/manager"
+            render={() => window.location.replace("https://mark-huynh.github.io/kigaru-manager/")}
+          />
           <Pop pose={this.state.showDialog ? "static" : "grow"}>
             <Fab
               onClick={this.handleClickButton}
