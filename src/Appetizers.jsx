@@ -3,31 +3,35 @@ import Menu from './Menu.jsx'
 import MenuContainer from './MenuContainer'
 // import wall from './pictures/backgrounds/IMG_3929.JPG'
 import wall from "./pictures/backgrounds/IMG_3932.JPG";
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 // import wall from './pictures/backgrounds/wall2.jpg'
 
 class Appetizer extends React.Component {
+  style = {
+    backgroundImage: `url(${wall})`
+  };
 
-    style={
-        backgroundImage: `url(${wall})`
-    }
-
-    render(){
-
-        return (
-          <div style={this.style} className="menu-background">
-            {!this.props.desktop && (
-              <div style={this.style} className="mobile-menu-back" />
-            )}
-            <MenuContainer>
-              <Menu
-                title="Appetizers"
-                items={[...this.props.appetizers]}
-              />
-            </MenuContainer>
-          </div>
-        );
-    }
+  render() {
+    return (
+      <div style={this.style} className="menu-background">
+        {!this.props.desktop && (
+          <div style={this.style} className="mobile-menu-back" />
+        )}
+        <MenuContainer>
+          {this.props.items ? (
+            this.props.items.map(item => {
+              console.log(item);
+              return <Menu title={item.name} items={[...item.meals]} />;
+            })
+          ) : (
+            <CircularProgress/>
+          )}
+        </MenuContainer>
+      </div>
+    );
+  }
 }
 
 export default Appetizer;

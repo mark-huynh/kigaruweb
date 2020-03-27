@@ -29,7 +29,8 @@ class App extends React.Component {
   state = {
     isDesktop: false,
     openDrawer: false,
-    showDialog: false
+    showDialog: false,
+    allData: []
   };
 
   updatePredicate = this.updatePredicate.bind(this);
@@ -47,6 +48,15 @@ class App extends React.Component {
   componentDidMount() {
     this.updatePredicate();
     window.addEventListener("resize", this.updatePredicate);
+    this.setState({isLoading: true})
+    fetch("https://8qqznzyrgh.execute-api.us-east-1.amazonaws.com/develop/menuitems")
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+          allData: data
+      });
+    },
+    err => console.log("err:" + err));
   }
 
   componentWillUnmount() {
@@ -57,6 +67,10 @@ class App extends React.Component {
     this.setState({ isDesktop: window.innerWidth > 890 });
   }
 
+
+  // Can refactor so all use same class (Ex:Sushi class) since all items are
+  // parsed the same way. Just need to pass a image as a prop so they each have diff backgrounds
+  // ex: line 99 could be the same as line 87, just diff pic prop
   render() {
     return (
       <BrowserRouter>
@@ -69,26 +83,19 @@ class App extends React.Component {
             path="/sushi"
             component={() => (
               <Sushi
-                specials={sushi.specials}
-                nigiri={sushi.nigiri}
-                gunkan={sushi.gunkan}
-                makirolls={sushi.makirolls}
-                desktop={this.state.isDesktop}
+                items={this.state.allData.sushi}
               />
             )}
           />
           <Route
             path="/appetizers"
-            render={() => <Appetizers appetizers={appetizers} />}
+            render={() => <Appetizers items={this.state.allData.appetizers} />}
           />
           <Route
             path="/maindish"
             render={() => (
               <Maindish
-                japaneseCurry={maindish.japaneseCurry}
-                noodles={maindish.noodles}
-                donburi={maindish.donburi}
-                combos={maindish.combos}
+                items={this.state.allData.main_dishes}
               />
             )}
           />
@@ -96,10 +103,7 @@ class App extends React.Component {
             path="/drinks"
             render={() => (
               <Drinks
-                beer={drinks.beer}
-                chuHi={drinks.chuHi}
-                softDrinks={drinks.softDrinks}
-                dessert={drinks.dessert}
+                items={this.state.allData.drinks}
               />
             )}
           />

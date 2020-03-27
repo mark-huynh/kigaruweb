@@ -4,6 +4,8 @@ import MenuContainer from "./MenuContainer";
 // import wall from "./pictures/backgrounds/wall1.jpg";
 import wall from "./pictures/backgrounds/IMG_3928.JPG";
 // C:\Users\Mark Huynh\Desktop\Dev\kigaruweb\src\pictures\backgrounds\IMG_3928.JPG
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 class Sushi extends React.Component {
   style = {
     backgroundImage: `url(${wall})`
@@ -17,22 +19,16 @@ class Sushi extends React.Component {
         )}
 
         <MenuContainer>
-          <Menu
-            title="Nigiri (1pc)"
-            items={[...this.props.nigiri]}
-          />
-          <Menu
-            title="Gunkan (2pc)"
-            items={[...this.props.gunkan]}
-          />
-          <Menu
-            title="Specials"
-            items={[...this.props.specials]}
-          />
-          <Menu
-            title="Maki / Rolls"
-            items={[...this.props.makirolls]}
-          />
+          {this.props.items ? 
+          this.props.items.map(item => {
+            console.log(item);
+            return (
+              <Menu
+                title={item.name}
+                items={[...item.meals]}
+              />
+            );
+          }): <CircularProgress/>}
         </MenuContainer>
       </div>
     );

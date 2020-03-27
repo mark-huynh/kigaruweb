@@ -3,6 +3,8 @@ import Menu from "./Menu.jsx";
 import MenuContainer from "./MenuContainer";
 // import wall from "./pictures/backgrounds/wall2.jpg";
 import wall from './pictures/backgrounds/IMG_3936.JPG'
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 class Drinks extends React.Component {
   style = {
@@ -16,17 +18,14 @@ class Drinks extends React.Component {
           <div style={this.style} className="mobile-menu-back" />
         )}
         <MenuContainer>
-          <Menu title="Beer" items={[...this.props.beer]} />
-
-          <Menu title="Chu-Hi" items={[...this.props.chuHi]} />
-          <Menu
-            title="Soft Drinks"
-            items={[...this.props.softDrinks]}
-          />
-          <Menu
-            title="Dessert"
-            items={[...this.props.dessert]}
-          />
+          {this.props.items ? (
+            this.props.items.map(item => {
+              console.log(item);
+              return <Menu title={item.name} items={[...item.meals]} />;
+            })
+          ) : (
+            <CircularProgress/>
+          )}
         </MenuContainer>
       </div>
     );
