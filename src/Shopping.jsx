@@ -25,7 +25,7 @@ class Shopping extends React.Component{
         let total = 0;
         for(let i = 0; i < this.props.items.length; i++)
         {
-          total += this.props.items[i].price;
+          total += parseFloat(this.props.items[i].price);
         }
 
         return (

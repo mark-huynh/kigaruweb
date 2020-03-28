@@ -71,9 +71,6 @@ function Mobilenav(props){
                 <ListItem className={classes.top}>
                   KIGARU SUSHI
                 </ListItem>
-                <ListItem className={classes.top}>
-                Due to governor Kate Brown's order we will be limiting all orders to take-out only during the business hours below. Thank you for understanding. 
-                </ListItem>
                 <NavLink
                   style={{ textDecoration: "none" }}
                   classname={classes.inactive}
