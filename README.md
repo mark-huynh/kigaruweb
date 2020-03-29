@@ -1,16 +1,16 @@
 ## Introduction
 This website was built for the Kigaru Sushi restaurant located in Beaverton, Oregon. Accompanied with a serverless MongoDB and AWS backend, this website dynamically renders content from the data that is manipulated from this [management repo](https://github.com/mark-huynh/kigaru-manager). 
 
-<figure style="text-align:center">
-    <img src="./images/kigaruwebsite.png" width=60% height="60%">
-    <figcaption>Desktop View</figcaption>
-</figure>
-<figure style="text-align:center">
-    <img src="./images/mobileweb.PNG" width=20% height="20%">  <img src="./images/drawer.PNG" width=20% height="20%"> 
-    <figcaption>Mobile View</figcaption>
-</figure>
-<!-- 
-<img src="./images/kigaruwebsite.png" width=40% height="40%"> <img src="./images/mobileweb.PNG" width=20% height="20%">  <img src="./images/drawer.PNG" width=20% height="20%">  -->
+Desktop and Mobile:
+
+<p align="center">
+<img src="./images/kigaruwebsite.png" width=80% height="80%">
+</p>
+
+<p align="center">
+<img src="./images/mobileweb.PNG" width=30% height="30%">  <img src="./images/drawer.PNG" width=30% height="20%"> 
+</p>
+
 
 ## Features
 
