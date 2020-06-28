@@ -72,9 +72,9 @@ class Home extends React.Component {
             </Description>
           </div>
         </div>
-        <div style={{fontSize: '3vw', fontFamily: 'Lato', padding: '10px'}}>
+        {/* <div style={{fontSize: '3vw', fontFamily: 'Lato', padding: '10px'}}>
   <b>Due to governor Kate Brown's order we will be limiting all orders to take-out only during the business hours below. Thank you for understanding. </b>
-</div>
+</div> */}
         <div className="info-wrap">
           <img
             alt="kigaru logo"

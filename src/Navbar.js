@@ -11,6 +11,10 @@ return(
     <NavLink exact to = '/'activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} >Home </NavLink>
   </li>
   <li>
+    {/* <NavLink activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}} ><a target="_blank" href="http://www.newsite.com">New site</a></NavLink> */}
+    <a target="_blank" href="https://ordering.chownow.com/order/22955/locations">Place Online Order</a>
+  </li>
+  <li>
     <NavLink to = '/sushi' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Sushi Bar </NavLink>
   </li>
   <li>
@@ -30,9 +34,9 @@ return(
   </li>
 
 </ul>
-<div style={{color: 'white', fontSize: '20px', fontFamily: 'Lato', padding: '10px'}}>
+{/* <div style={{color: 'white', fontSize: '20px', fontFamily: 'Lato', padding: '10px'}}>
   <b>Due to governor Kate Brown's order we will be limiting all orders to take-out only during the business hours below. Thank you for understanding. </b>
-</div>
+</div> */}
 </div>
 
 );
