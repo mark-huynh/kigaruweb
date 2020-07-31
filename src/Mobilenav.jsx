@@ -14,6 +14,7 @@ import sending from './pictures/icons/sending.svg';
 import sushi from './pictures/icons/sushi.svg';
 import { makeStyles } from '@material-ui/styles';
 import { NavLink } from 'react-router-dom';
+import takeout from "./pictures/icons/takeout.svg";
 
 
 
@@ -62,15 +63,13 @@ function Mobilenav(props){
               }}
             >
               <List
-                onClick={() =>{
-                setOpen(false);
-                props.closeDrawer();
-              }}
+                onClick={() => {
+                  setOpen(false);
+                  props.closeDrawer();
+                }}
                 className={classes.list}
               >
-                <ListItem className={classes.top}>
-                  KIGARU SUSHI
-                </ListItem>
+                <ListItem className={classes.top}>KIGARU SUSHI</ListItem>
                 <NavLink
                   style={{ textDecoration: "none" }}
                   classname={classes.inactive}
@@ -80,12 +79,22 @@ function Mobilenav(props){
                 >
                   <ListItem button key="Home">
                     <ListItemIcon>
-                      <img src={home} alt="home"/>
+                      <img src={home} alt="home" />
                     </ListItemIcon>
                     Home
                   </ListItem>
                 </NavLink>
-
+                <a
+                  target="_blank"
+                  href="https://ordering.chownow.com/order/22955/locations"
+                >
+                  <ListItem button key="Home">
+                    <ListItemIcon>
+                      <img src={takeout} alt="takeout" />
+                    </ListItemIcon>
+                    Order Online
+                  </ListItem>
+                </a>
                 <NavLink
                   style={{ textDecoration: "none" }}
                   classname={classes.inactive}
@@ -156,10 +165,7 @@ function Mobilenav(props){
                 </NavLink>
               </List>
             </Drawer>
-            <IconButton
-              onClick={() => setOpen(true)}
-              className={classes.root}
-            >
+            <IconButton onClick={() => setOpen(true)} className={classes.root}>
               <Icon style={{ fontSize: "30px" }}>menu</Icon>
             </IconButton>
           </React.Fragment>
