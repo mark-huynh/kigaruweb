@@ -88,9 +88,9 @@ class Home extends React.Component {
             onClick={this.handleMap}
           >
              <li><b>Tuesday - Saturday: <br/></b> 11:30AM - 2:30PM</li>
-            <li>& 4PM - 11PM</li>
+            <li>& 5PM - 11PM</li>
             <li><b>Sunday:</b> <br/> 11:30AM - 2:30PM </li>
-            <li>& 4PM - 10PM</li>
+            <li>& 5PM - 10PM</li>
             <li><b>Monday</b>: <br/>Closed</li>
             <br />
             <li> 3486 SW Cedar Hills Blvd, Beaverton, OR 97005</li>
