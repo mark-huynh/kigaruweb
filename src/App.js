@@ -57,6 +57,35 @@ class App extends React.Component {
       });
     },
     err => console.log("err:" + err));
+    if(window.innerWidth > 890){
+      // console.log("desktop")
+    fetch("https://insights-collector.newrelic.com/v1/accounts/2861351/events", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // insights key, it is ok to be exposed to public (until card gets associated)
+      'X-Insert-Key': 'NRII-Oay07V1WwBlB98KjOxBcNQS7ohyTaFUY'
+    },
+    body: JSON.stringify({
+      "eventType": "Visits",
+      "device": "Desktop"
+    })
+  });
+    } else {
+      // console.log("mobile")
+    fetch("https://insights-collector.newrelic.com/v1/accounts/2861351/events", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // insights key, it is ok to be exposed to public (until card gets associated)
+      'X-Insert-Key': 'NRII-Oay07V1WwBlB98KjOxBcNQS7ohyTaFUY'
+    },
+    body: JSON.stringify({
+      "eventType": "Visits",
+      "device": "Mobile"
+    })
+  });
+    }
   }
 
   componentWillUnmount() {

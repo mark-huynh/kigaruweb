@@ -18,6 +18,24 @@ import takeout from "./pictures/icons/takeout.svg";
 
 
 
+async function insights(category) {
+  let resp = await fetch("https://insights-collector.newrelic.com/v1/accounts/2861351/events", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // insights key, it is ok to be exposed to public (until card gets associated)
+      'X-Insert-Key': 'NRII-Oay07V1WwBlB98KjOxBcNQS7ohyTaFUY'
+    },
+    body: JSON.stringify({
+      "eventType": "TabClicks",
+      "device": "Mobile",
+      "category": category
+    })
+  });
+  // resp = await resp.json();
+  // console.log(resp);
+  // console.log("done")
+}
 
 const useStyles = makeStyles({
     root: {
@@ -77,7 +95,7 @@ function Mobilenav(props){
                   to="/"
                   exact
                 >
-                  <ListItem button key="Home">
+                  <ListItem onClick={() => insights("Home")} button key="Home">
                     <ListItemIcon>
                       <img src={home} alt="home" />
                     </ListItemIcon>
@@ -88,7 +106,7 @@ function Mobilenav(props){
                   target="_blank"
                   href="https://ordering.chownow.com/order/22955/locations"
                 >
-                  <ListItem button key="Home">
+                  <ListItem onClick={() => insights("Order Online")} button key="Home" button key="Takeout">
                     <ListItemIcon>
                       <img src={takeout} alt="takeout" />
                     </ListItemIcon>
@@ -101,7 +119,7 @@ function Mobilenav(props){
                   activeClassName={classes.active}
                   to="/sushi"
                 >
-                  <ListItem button key="Sushi">
+                  <ListItem onClick={() => insights("Sushi")} button key="Sushi">
                     <ListItemIcon>
                       <img src={sushi} alt="sushi" />
                     </ListItemIcon>
@@ -114,7 +132,7 @@ function Mobilenav(props){
                   activeClassName={classes.active}
                   to="/appetizers"
                 >
-                  <ListItem button key="Appetizers">
+                  <ListItem onClick={() => insights("Appetizers")} button key="Appetizers">
                     <ListItemIcon>
                       <img src={skewer} alt="appetizers" />
                     </ListItemIcon>
@@ -128,7 +146,7 @@ function Mobilenav(props){
                   activeClassName={classes.active}
                   to="/maindish"
                 >
-                  <ListItem button key="Main">
+                  <ListItem onClick={() => insights("Main Dishes")} button key="Main">
                     <ListItemIcon>
                       <img src={noodle} alt="main dishes" />
                     </ListItemIcon>
@@ -142,7 +160,7 @@ function Mobilenav(props){
                   activeClassName={classes.active}
                   to="/drinks"
                 >
-                  <ListItem button key="Drinks">
+                  <ListItem onClick={() => insights("Drinks")} button key="Drinks">
                     <ListItemIcon>
                       <img src={beer} alt="drinks" />
                     </ListItemIcon>
@@ -156,7 +174,7 @@ function Mobilenav(props){
                   activeClassName={classes.active}
                   to="/contact"
                 >
-                  <ListItem button key="Contact">
+                  <ListItem onClick={() => insights("Contact")} button key="Contact">
                     <ListItemIcon>
                       <img src={sending} alt="contact" />
                     </ListItemIcon>
