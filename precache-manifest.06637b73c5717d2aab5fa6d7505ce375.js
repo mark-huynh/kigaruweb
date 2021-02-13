@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/static/media/Negitoro.8fb53a51.JPG"
   },
   {
-    "revision": "7c24c6be7a2899b3abf75dcdc39ef4ff",
+    "revision": "adcab2662fdf5b493eff7d5c903dfb1d",
     "url": "/index.html"
   }
 ];
