@@ -17,6 +17,7 @@ import {appetizers} from './food/appetizers'
 import * as maindish from './food/maindish'  
 import * as drinks from './food/drinks'  
 import * as sushi from './food/sushi'  
+import { allFood } from './food/allFood';
 
 const Pop = posed.div({
   static: {},
@@ -49,14 +50,17 @@ class App extends React.Component {
     this.updatePredicate();
     window.addEventListener("resize", this.updatePredicate);
     this.setState({isLoading: true})
-    fetch("https://8qqznzyrgh.execute-api.us-east-1.amazonaws.com/develop/menuitems")
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-          allData: data
-      });
-    },
-    err => console.log("err:" + err));
+    // fetch("https://8qqznzyrgh.execute-api.us-east-1.amazonaws.com/develop/menuitems")
+    // .then(response => response.json())
+    // .then(data => {
+    //   this.setState({
+    //       allData: data
+    //   });
+    // },
+    this.setState({
+      allData: allFood
+    });
+    // err => console.log("err:" + err));
     if(window.innerWidth > 890){
       // console.log("desktop")
     fetch("https://insights-collector.newrelic.com/v1/accounts/2861351/events", {
