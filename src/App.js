@@ -17,7 +17,61 @@ import {appetizers} from './food/appetizers'
 import * as maindish from './food/maindish'  
 import * as drinks from './food/drinks'  
 import * as sushi from './food/sushi'  
-import { allFood } from './food/allFood';
+// import { allFood } from './food/allFood';
+
+// const firebase = require("firebase");
+import firebase from "firebase"
+// // Required for side-effects
+// require("firebase/firestore");
+
+// import * as firebase from 'firebase';
+// import flamelink from 'flamelink';
+const flamelink = require("flamelink");
+
+// Initialize Cloud Firestore through Firebase
+const firebaseApp = firebase.initializeApp({
+  apiKey: "AIzaSyBKf10JLkllwUwiGX_tPKZlH92ED7tM6kQ",
+  authDomain: "kigaru-ec3a1.firebaseapp.com",
+  databaseURL: "https://kigaru-ec3a1-default-rtdb.firebaseio.com",
+  projectId: "kigaru-ec3a1",
+  storageBucket: "kigaru-ec3a1.appspot.com",
+  messagingSenderId: "370142746603",
+  appId: "1:370142746603:web:e21872b1a786bc72d22bae",
+  measurementId: "G-QX0SRLYVB3",
+});
+
+const app = flamelink({
+  firebaseApp, // required
+  dbType: "cf", // can be either 'rtdb' or 'cf' for Realtime DB or Cloud Firestore
+  env: "production", // optional, default shown
+  locale: "en-US", // optional, default shown
+  precache: true, // optional, default shown. Currently it only precaches "schemas" for better performance
+});
+
+let sushiCategories = ["Nigiri (1pc)", "Maki/Rolls", "Specials", "Gunkan (2pc)"];
+let drinksCategories = ["Soft Drinks", "Beer", "Chu-Hi", "Desserts"]
+let mainDishesCategories = ["Japanese Curry", "Donburi", "Ramen/Udon"]
+let appetizersCategories = ["Zensai"]
+
+let schemaKeys = ["mainDishes", "drinks", "sushi", "appetizers"]
+
+let categoriesMap = {
+  "sushi": sushiCategories,
+  "drinks": drinksCategories,
+  "mainDishes": mainDishesCategories,
+  "appetizers": appetizersCategories
+}
+
+async function getFoodByCategory(key, category) {
+  let foo =  await app.content.getByField({schemaKey: key, field: "category", value: category})
+  return foo;
+}
+
+
+let itemsProcessed = 0
+
+let allFood = {}
+
 
 const Pop = posed.div({
   static: {},
@@ -31,7 +85,9 @@ class App extends React.Component {
     isDesktop: false,
     openDrawer: false,
     showDialog: false,
-    allData: []
+    allData: [],
+    hours: "loading...",
+    announcements: ""
   };
 
   updatePredicate = this.updatePredicate.bind(this);
@@ -57,9 +113,53 @@ class App extends React.Component {
     //       allData: data
     //   });
     // },
-    this.setState({
-      allData: allFood
-    });
+    app.content.get({schemaKey: "hoursOfOperation"}).then(e => {
+      this.setState({hours: e.inputField})
+    })
+
+    app.content.get({schemaKey: "announcements1"}).then(e => {
+      this.setState({announcements: e.annoucement})
+    })
+
+
+
+    schemaKeys.forEach(key => {
+      allFood[key] = []
+      let categories = categoriesMap[key]
+      categories.forEach(category => {
+        getFoodByCategory(key, category).then(allItemsOfCategory => {
+          let categoryObj = {
+            name: category
+          }
+          categoryObj.meals = []
+          if(allItemsOfCategory != null){
+              for(let [key, value] of Object.entries(allItemsOfCategory)) {
+                let item = {
+                  name: value.name,
+                  price: value.price,
+                  description: value.description
+                }
+                categoryObj.meals.push(item)
+              }
+            }
+          
+          allFood[key].push(categoryObj)
+          itemsProcessed++
+          if(itemsProcessed == sushiCategories.length + drinksCategories.length + mainDishesCategories.length + appetizersCategories.length) {
+            // console.log(JSON.stringify(allFood, null, 2))
+            this.setState({
+              allData: allFood
+            });
+          } 
+        })
+      })
+    })
+    
+
+
+    // this.setState({
+    //   allData: allFood
+    // });
     // err => console.log("err:" + err));
     if(window.innerWidth > 890){
       // console.log("desktop")
@@ -108,9 +208,11 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          {this.state.isDesktop ? <Navbar /> : <Mobilenav openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
+          {this.state.isDesktop ? <Navbar announcements = {this.state.announcements} /> : <Mobilenav announcements = {this.state.announcements} openDrawer={this.state.openDrawer} closeDrawer={() => this.setState({openDrawer: false})}/>}
           <Route exact path='/' render={ () => (<Home
             handleListClick={() => this.setState({openDrawer: true})}
+            hours = {this.state.hours}
+            announcements = {this.state.announcements}
           />)} />
           <Route
             path="/sushi"
@@ -128,7 +230,7 @@ class App extends React.Component {
             path="/maindish"
             render={() => (
               <Maindish
-                items={this.state.allData.main_dishes}
+                items={this.state.allData.mainDishes}
               />
             )}
           />

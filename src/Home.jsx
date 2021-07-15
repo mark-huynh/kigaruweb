@@ -1,6 +1,41 @@
 import React from "react";
 import posed from "react-pose";
 import logo from './pictures/Logo_7404-page-001.jpg';
+import ReactHtmlParser from 'react-html-parser'; 
+
+import firebase from "firebase"
+// // Required for side-effects
+// require("firebase/firestore");
+
+// import * as firebase from 'firebase';
+// import flamelink from 'flamelink';
+const flamelink = require("flamelink");
+
+// Initialize Cloud Firestore through Firebase
+// const firebaseApp = firebase.initializeApp({
+//   apiKey: "AIzaSyBKf10JLkllwUwiGX_tPKZlH92ED7tM6kQ",
+//   authDomain: "kigaru-ec3a1.firebaseapp.com",
+//   databaseURL: "https://kigaru-ec3a1-default-rtdb.firebaseio.com",
+//   projectId: "kigaru-ec3a1",
+//   storageBucket: "kigaru-ec3a1.appspot.com",
+//   messagingSenderId: "370142746603",
+//   appId: "1:370142746603:web:e21872b1a786bc72d22bae",
+//   measurementId: "G-QX0SRLYVB3",
+// });
+
+// if (firebase.apps.length === 0) {
+//   firebase.initializeApp({
+//     apiKey: "AIzaSyBKf10JLkllwUwiGX_tPKZlH92ED7tM6kQ",
+//     authDomain: "kigaru-ec3a1.firebaseapp.com",
+//     databaseURL: "https://kigaru-ec3a1-default-rtdb.firebaseio.com",
+//     projectId: "kigaru-ec3a1",
+//     storageBucket: "kigaru-ec3a1.appspot.com",
+//     messagingSenderId: "370142746603",
+//     appId: "1:370142746603:web:e21872b1a786bc72d22bae",
+//     measurementId: "G-QX0SRLYVB3",
+//   });
+// }
+
 
 const Description = posed.ul({
   open: {
@@ -27,7 +62,7 @@ const FadeIn = posed.div({
 
 class Home extends React.Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   toggle = () =>
@@ -37,6 +72,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     setTimeout(this.toggle, 1300);
+
   }
 
   handleMap = () => {
@@ -73,7 +109,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div style={{fontSize: '3vw', fontFamily: 'Lato', padding: '10px'}}>
-  <b>Gift cards now available!</b>
+  <b>{this.props.announcements}</b>
 </div>
         <div className="info-wrap">
           <img
@@ -87,13 +123,14 @@ class Home extends React.Component {
             style={{ cursor: "pointer" }}
             onClick={this.handleMap}
           >
-             <li><b>Tuesday - Saturday: <br/></b> 11:30AM - 2:30PM</li>
+            {ReactHtmlParser(this.props.hours)}
+             {/* <li><b>Tuesday - Saturday: <br/></b> 11:30AM - 2:30PM</li>
             <li>& 5PM - 11PM</li>
             <li><b>Sunday:</b> <br/> 11:30AM - 2:30PM </li>
             <li>& 5PM - 10PM</li>
             <li><b>Monday</b>: <br/>Closed</li>
             <br />
-            <li> 3486 SW Cedar Hills Blvd, Beaverton, OR 97005</li>
+            <li> 3486 SW Cedar Hills Blvd, Beaverton, OR 97005</li> */}
           </ul>
         </div>
       </div>

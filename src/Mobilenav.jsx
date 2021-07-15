@@ -89,7 +89,7 @@ function Mobilenav(props){
               >
                 <ListItem className={classes.top}>KIGARU SUSHI</ListItem>
                 <ListItem className={classes.top}>
-                Gift cards now available! 
+                {props.announcements}
                 </ListItem>
                 <NavLink
                   style={{ textDecoration: "none" }}

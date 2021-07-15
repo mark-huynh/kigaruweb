@@ -19,7 +19,7 @@ async function insights(category) {
   // console.log("done")
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
 
 return(
 <div className = "navwrap">
@@ -53,7 +53,7 @@ return(
 
 </ul>
 <div style={{color: 'white', fontSize: '20px', fontFamily: 'Lato', padding: '10px'}}>
-  <b>Gift cards now available! </b>
+  <b>{props.announcements} </b>
 </div>
 </div>
 
