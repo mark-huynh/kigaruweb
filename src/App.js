@@ -142,7 +142,7 @@ class App extends React.Component {
                 categoryObj.meals.push(item)
               }
             }
-          
+          categoryObj.meals.sort((a,b) => parseFloat(a.price) - parseFloat(b.price))
           allFood[key].push(categoryObj)
           itemsProcessed++
           if(itemsProcessed == sushiCategories.length + drinksCategories.length + mainDishesCategories.length + appetizersCategories.length) {
