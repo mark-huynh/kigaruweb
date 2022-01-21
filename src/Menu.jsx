@@ -40,6 +40,8 @@ class Menu extends React.Component {
           alignItems="center"
           spacing={5}
         >
+          {this.props.children}
+
           {menuBlocks.map(menuBlock => (
             <Grid item lg={6}>
               {React.createElement(

@@ -7,6 +7,8 @@ import { ListItemIcon } from '@material-ui/core';
 import { IconButton } from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
 import skewer from './pictures/icons/appetizer.svg';
+import appetizer from './pictures/icons/appetizer.png';
+import dish from './pictures/icons/dish.png';
 import beer from './pictures/icons/beer.svg';
 import home from './pictures/icons/home.svg';
 import noodle from './pictures/icons/noodle.svg';
@@ -137,7 +139,7 @@ function Mobilenav(props){
                 >
                   <ListItem onClick={() => insights("Appetizers")} button key="Appetizers">
                     <ListItemIcon>
-                      <img src={skewer} alt="appetizers" />
+                      <img src={appetizer} alt="appetizers" />
                     </ListItemIcon>
                     Appetizers
                   </ListItem>
@@ -153,7 +155,35 @@ function Mobilenav(props){
                     <ListItemIcon>
                       <img src={noodle} alt="main dishes" />
                     </ListItemIcon>
-                    Main Dish
+                    Main Dishes
+                  </ListItem>
+                </NavLink>
+
+                <NavLink
+                  style={{ textDecoration: "none" }}
+                  classname={classes.inactive}
+                  activeClassName={classes.active}
+                  to="/skewers"
+                >
+                  <ListItem onClick={() => insights("Skewers")} button key="Skewers">
+                    <ListItemIcon>
+                      <img src={skewer} alt="skewers" />
+                    </ListItemIcon>
+                    Skewers
+                  </ListItem>
+                </NavLink>
+
+                <NavLink
+                  style={{ textDecoration: "none" }}
+                  classname={classes.inactive}
+                  activeClassName={classes.active}
+                  to="/sides"
+                >
+                  <ListItem onClick={() => insights("Sides")} button key="Sides">
+                    <ListItemIcon>
+                      <img src={dish} alt="sides" />
+                    </ListItemIcon>
+                    Sides
                   </ListItem>
                 </NavLink>
 

@@ -11,6 +11,10 @@ class Drinks extends React.Component {
     backgroundImage: `url(${wall})`
   };
 
+  tmp = {
+    padding: 20
+  }
+
   render() {
     return (
       <div style={this.style} className="menu-background">
@@ -18,6 +22,11 @@ class Drinks extends React.Component {
           <div style={this.style} className="mobile-menu-back" />
         )}
         <MenuContainer>
+          <Menu title={"Sake"} items={[]}>
+            <div style={this.tmp}>
+              <a href={this.props.sakeURL}>Tap for External Menu</a>
+            </div>
+          </Menu>
           {this.props.items ? (
             this.props.items.map(item => {
               console.log(item);

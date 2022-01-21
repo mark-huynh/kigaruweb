@@ -39,10 +39,16 @@ return(
     <NavLink to = '/appetizers' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Appetizers </NavLink>
   </li>
   <li onClick={() => insights("Main Dishes")}>
-    <NavLink to = '/maindish' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Main Dish </NavLink>
+    <NavLink to = '/maindish' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Main Dishes </NavLink>
+  </li>
+  <li onClick={() => insights("Skewers")}>
+    <NavLink to = '/skewers' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Skewers </NavLink>
+  </li>
+  <li onClick={() => insights("Sides")}>
+    <NavLink to = '/sides' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Sides </NavLink>
   </li>
   <li onClick={() => insights("Drinks")}>
-    <NavLink to = '/drinks' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Drinks Etc </NavLink>
+    <NavLink to = '/drinks' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Drinks/Desserts </NavLink>
   </li>
   <li onClick={() => insights("Contact")}>
     <NavLink to = '/contact' activeStyle={{color:"white", backgroundColor: "#464646", fontWeight: "bold"}}> Contact </NavLink>

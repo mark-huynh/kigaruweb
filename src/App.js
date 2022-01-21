@@ -1,5 +1,7 @@
 import React from "react";
 import Home from "./Home";
+import Skewers from './Skewers';
+import Sides from './Sides';
 import Sushi from "./Sushi";
 import Appetizers from "./Appetizers";
 import Footer from "./Footer.js";
@@ -48,18 +50,22 @@ const app = flamelink({
   precache: true, // optional, default shown. Currently it only precaches "schemas" for better performance
 });
 
-let sushiCategories = ["Nigiri (1pc)", "Maki/Rolls", "Specials", "Gunkan (2pc)"];
+let sushiCategories = ["Nigiri (1pc)", "Maki/Rolls", "Sashimi", "Gunkan (2pc)", "Specials"];
 let drinksCategories = ["Soft Drinks", "Beer", "Chu-Hi", "Desserts"]
 let mainDishesCategories = ["Japanese Curry", "Donburi", "Ramen/Udon"]
 let appetizersCategories = ["Zensai"]
+let skewerCategories = ["Skewers"]
+let sidesCategories = ["Sides"]
 
-let schemaKeys = ["mainDishes", "drinks", "sushi", "appetizers"]
+let schemaKeys = ["mainDishes", "drinks", "sushi", "appetizers", "skewers", "sides"]
 
 let categoriesMap = {
   "sushi": sushiCategories,
   "drinks": drinksCategories,
   "mainDishes": mainDishesCategories,
-  "appetizers": appetizersCategories
+  "appetizers": appetizersCategories,
+  "skewers": skewerCategories,
+  "sides": sidesCategories
 }
 
 async function getFoodByCategory(key, category) {
@@ -121,8 +127,10 @@ class App extends React.Component {
       this.setState({announcements: e.annoucement})
     })
 
-
-
+    app.content.get({schemaKey: "sake"}).then(e => {
+      this.setState({sakeURL: e.url})
+    })
+    
     schemaKeys.forEach(key => {
       allFood[key] = []
       let categories = categoriesMap[key]
@@ -238,7 +246,24 @@ class App extends React.Component {
             path="/drinks"
             render={() => (
               <Drinks
+                sakeURL={this.state.sakeURL}
                 items={this.state.allData.drinks}
+              />
+            )}
+          />
+          <Route
+            path="/skewers"
+            render={() => (
+              <Skewers
+                items={this.state.allData.skewers}
+              />
+            )}
+          />
+          <Route
+            path="/sides"
+            render={() => (
+              <Sides
+                items={this.state.allData.sides}
               />
             )}
           />
